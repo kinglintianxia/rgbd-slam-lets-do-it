@@ -76,7 +76,7 @@ int main(int argc, char** argv)
     viewer->setBackgroundColor(0, 0, 0);
     viewer->addCoordinateSystem(0.5);
     viewer->addPointCloud(cloud1_trans, "joint cloud", 0);
-
+    viewer->setPointCloudRenderingProperties(pcl::visualization::PCL_VISUALIZER_POINT_SIZE, 1, "joint cloud", 0);
     while(!viewer->wasStopped())
     {
         viewer->spinOnce(100);
