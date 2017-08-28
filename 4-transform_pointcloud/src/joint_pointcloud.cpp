@@ -18,10 +18,10 @@ int main(int argc, char** argv)
 
     // Frame
     Frame frame1, frame2;
-    frame1.color = cv::imread("../data/rgb1.png");
-    frame2.color = cv::imread("../data/rgb2.png");
-    frame1.depth = cv::imread("../data/depth1.png", -1);
-    frame2.depth = cv::imread("../data/depth2.png", -1);
+    frame1.color = cv::imread("../data1/rgb1.png");
+    frame2.color = cv::imread("../data1/rgb2.png");
+    frame1.depth = cv::imread("../data1/depth1.png", -1);
+    frame2.depth = cv::imread("../data1/depth2.png", -1);
 
     // Cmpute descritors and find matches
     compute_keypoints_descriptors(frame1, filereader.get_data("detector").c_str(), filereader.get_data("descriptor").c_str());
@@ -55,7 +55,7 @@ int main(int argc, char** argv)
     // Data prepare
     Eigen::Vector3f offset;
 //////////// Only at<double> works!!!
-    offset << result.tvect.at<double>(0,0), result.tvect.at<double>(0,1), result.tvect.at<double>(0,2);
+    offset << result.tvect.at<double>(0,0), result.tvect.at<double>(1,0), result.tvect.at<double>(2,0);
     std::cout << "offset: \n" << offset << std::endl;
     // Rotation
     cv::Mat r_mat;
