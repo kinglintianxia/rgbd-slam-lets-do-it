@@ -1,0 +1,100 @@
+\hypertarget{classlsd__slam_1_1_input_image_stream}{\section{lsd\-\_\-slam\-:\-:Input\-Image\-Stream Class Reference}
+\label{classlsd__slam_1_1_input_image_stream}\index{lsd\-\_\-slam\-::\-Input\-Image\-Stream@{lsd\-\_\-slam\-::\-Input\-Image\-Stream}}
+}
+
+
+{\ttfamily \#include $<$Input\-Image\-Stream.\-h$>$}
+
+Inheritance diagram for lsd\-\_\-slam\-:\-:Input\-Image\-Stream\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classlsd__slam_1_1_input_image_stream}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classlsd__slam_1_1_input_image_stream_a54d88ab343986e2a8f17d1ff5f5901be}{run} ()
+\item 
+\hypertarget{classlsd__slam_1_1_input_image_stream_a6e8bce6255dabfb4556e4fac8390a6b0}{virtual void {\bfseries set\-Calibration} (std\-::string file)}\label{classlsd__slam_1_1_input_image_stream_a6e8bce6255dabfb4556e4fac8390a6b0}
+
+\item 
+\hyperlink{classlsd__slam_1_1_notify_buffer}{Notify\-Buffer}$<$ \hyperlink{structlsd__slam_1_1_timestamped_object}{Timestamped\-Mat} $>$ $\ast$ \hyperlink{classlsd__slam_1_1_input_image_stream_ac8212a5168eb9bc3aa04f7bcc6922dfb}{get\-Buffer} ()
+\item 
+float \hyperlink{classlsd__slam_1_1_input_image_stream_a1198316d84d00116bcbee6358c591493}{fx} ()
+\item 
+\hypertarget{classlsd__slam_1_1_input_image_stream_ae8c6946d639eaa11bf228bb62fb0317c}{float {\bfseries fy} ()}\label{classlsd__slam_1_1_input_image_stream_ae8c6946d639eaa11bf228bb62fb0317c}
+
+\item 
+\hypertarget{classlsd__slam_1_1_input_image_stream_a56cdd46f70f734b5a3f34344f6f448ba}{float {\bfseries cx} ()}\label{classlsd__slam_1_1_input_image_stream_a56cdd46f70f734b5a3f34344f6f448ba}
+
+\item 
+\hypertarget{classlsd__slam_1_1_input_image_stream_a53b48fb8024b569ba167d886a2b28f3f}{float {\bfseries cy} ()}\label{classlsd__slam_1_1_input_image_stream_a53b48fb8024b569ba167d886a2b28f3f}
+
+\item 
+\hypertarget{classlsd__slam_1_1_input_image_stream_aae9c5e1689761e9ea6f9f4ce8682e8f1}{int {\bfseries width} ()}\label{classlsd__slam_1_1_input_image_stream_aae9c5e1689761e9ea6f9f4ce8682e8f1}
+
+\item 
+\hypertarget{classlsd__slam_1_1_input_image_stream_ab9a42e4ab63c80b7e0ba629ec689b7fa}{int {\bfseries height} ()}\label{classlsd__slam_1_1_input_image_stream_ab9a42e4ab63c80b7e0ba629ec689b7fa}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classlsd__slam_1_1_input_image_stream_ad67ef5a34166c0cae737135a3c6e4375}{\hyperlink{classlsd__slam_1_1_notify_buffer}{Notify\-Buffer}$<$ \hyperlink{structlsd__slam_1_1_timestamped_object}{Timestamped\-Mat} $>$ $\ast$ {\bfseries image\-Buffer}}\label{classlsd__slam_1_1_input_image_stream_ad67ef5a34166c0cae737135a3c6e4375}
+
+\item 
+\hypertarget{classlsd__slam_1_1_input_image_stream_a2808cd73e1560f579da992f5eb45c451}{float {\bfseries fx\-\_\-}}\label{classlsd__slam_1_1_input_image_stream_a2808cd73e1560f579da992f5eb45c451}
+
+\item 
+\hypertarget{classlsd__slam_1_1_input_image_stream_abd686d1040fe5fcfb165c1a1ee8369d9}{float {\bfseries fy\-\_\-}}\label{classlsd__slam_1_1_input_image_stream_abd686d1040fe5fcfb165c1a1ee8369d9}
+
+\item 
+\hypertarget{classlsd__slam_1_1_input_image_stream_a9e93e4726bb40a37e1f23805703319bb}{float {\bfseries cx\-\_\-}}\label{classlsd__slam_1_1_input_image_stream_a9e93e4726bb40a37e1f23805703319bb}
+
+\item 
+\hypertarget{classlsd__slam_1_1_input_image_stream_aa7abd971928f3f58dd02a8e9e0eda804}{float {\bfseries cy\-\_\-}}\label{classlsd__slam_1_1_input_image_stream_aa7abd971928f3f58dd02a8e9e0eda804}
+
+\item 
+\hypertarget{classlsd__slam_1_1_input_image_stream_a9f0c3363cfc33682502b93b18324749c}{int {\bfseries width\-\_\-}}\label{classlsd__slam_1_1_input_image_stream_a9f0c3363cfc33682502b93b18324749c}
+
+\item 
+\hypertarget{classlsd__slam_1_1_input_image_stream_a58c25612f8ac94888c983bc3cffce39e}{int {\bfseries height\-\_\-}}\label{classlsd__slam_1_1_input_image_stream_a58c25612f8ac94888c983bc3cffce39e}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Virtual Image\-Stream. Can be from Open\-C\-V's Image\-Capture, R\-O\-S or Android. Also has to provide the camera calibration for that stream, as well as the respective undistorter object (if required). Runs in it's own thread, and has a \hyperlink{classlsd__slam_1_1_notify_buffer}{Notify\-Buffer}, in which received images are stored. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classlsd__slam_1_1_input_image_stream_a1198316d84d00116bcbee6358c591493}{\index{lsd\-\_\-slam\-::\-Input\-Image\-Stream@{lsd\-\_\-slam\-::\-Input\-Image\-Stream}!fx@{fx}}
+\index{fx@{fx}!lsd_slam::InputImageStream@{lsd\-\_\-slam\-::\-Input\-Image\-Stream}}
+\subsubsection[{fx}]{\setlength{\rightskip}{0pt plus 5cm}float lsd\-\_\-slam\-::\-Input\-Image\-Stream\-::fx (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classlsd__slam_1_1_input_image_stream_a1198316d84d00116bcbee6358c591493}
+Gets the Camera Calibration. To avoid any dependencies, just as simple float / int's. \hypertarget{classlsd__slam_1_1_input_image_stream_ac8212a5168eb9bc3aa04f7bcc6922dfb}{\index{lsd\-\_\-slam\-::\-Input\-Image\-Stream@{lsd\-\_\-slam\-::\-Input\-Image\-Stream}!get\-Buffer@{get\-Buffer}}
+\index{get\-Buffer@{get\-Buffer}!lsd_slam::InputImageStream@{lsd\-\_\-slam\-::\-Input\-Image\-Stream}}
+\subsubsection[{get\-Buffer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Notify\-Buffer}$<${\bf Timestamped\-Mat}$>$$\ast$ lsd\-\_\-slam\-::\-Input\-Image\-Stream\-::get\-Buffer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classlsd__slam_1_1_input_image_stream_ac8212a5168eb9bc3aa04f7bcc6922dfb}
+Gets the \hyperlink{classlsd__slam_1_1_notify_buffer}{Notify\-Buffer} to which incoming images are stored. \hypertarget{classlsd__slam_1_1_input_image_stream_a54d88ab343986e2a8f17d1ff5f5901be}{\index{lsd\-\_\-slam\-::\-Input\-Image\-Stream@{lsd\-\_\-slam\-::\-Input\-Image\-Stream}!run@{run}}
+\index{run@{run}!lsd_slam::InputImageStream@{lsd\-\_\-slam\-::\-Input\-Image\-Stream}}
+\subsubsection[{run}]{\setlength{\rightskip}{0pt plus 5cm}virtual void lsd\-\_\-slam\-::\-Input\-Image\-Stream\-::run (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classlsd__slam_1_1_input_image_stream_a54d88ab343986e2a8f17d1ff5f5901be}
+Starts the thread. 
+
+Reimplemented in \hyperlink{classlsd__slam_1_1_r_o_s_image_stream_thread_a8d20574101837956cdebe14761c368fc}{lsd\-\_\-slam\-::\-R\-O\-S\-Image\-Stream\-Thread}.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/home/king/rgbd-\/slam-\/lets-\/do-\/it/9-\/doxygen/lsd\-\_\-slam/lsd\-\_\-slam\-\_\-core/src/\-I\-O\-Wrapper/Input\-Image\-Stream.\-h\end{DoxyCompactItemize}

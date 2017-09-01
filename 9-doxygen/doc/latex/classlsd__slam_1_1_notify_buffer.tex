@@ -1,0 +1,105 @@
+\hypertarget{classlsd__slam_1_1_notify_buffer}{\section{lsd\-\_\-slam\-:\-:Notify\-Buffer$<$ T $>$ Class Template Reference}
+\label{classlsd__slam_1_1_notify_buffer}\index{lsd\-\_\-slam\-::\-Notify\-Buffer$<$ T $>$@{lsd\-\_\-slam\-::\-Notify\-Buffer$<$ T $>$}}
+}
+
+
+{\ttfamily \#include $<$Notify\-Buffer.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classlsd__slam_1_1_notify_buffer_a38032ad4284b2e1f5e92812c52f162d6}{Notify\-Buffer} (int buffer\-Size)
+\item 
+\hyperlink{classlsd__slam_1_1_notify_buffer_a3933bbbf4b48593399950b251e677299}{Notify\-Buffer} (int buffer\-Size, \hyperlink{classlsd__slam_1_1_notifiable}{Notifiable} $\ast$receiver)
+\item 
+void \hyperlink{classlsd__slam_1_1_notify_buffer_abff5c7a6af7790acfc5cc2f83ae541c0}{set\-Receiver} (\hyperlink{classlsd__slam_1_1_notifiable}{Notifiable} $\ast$receiver)
+\item 
+bool \hyperlink{classlsd__slam_1_1_notify_buffer_a04532ca3a71447a2b8fa51f5e9db8dd8}{push\-Back} (const T \&object)
+\item 
+int \hyperlink{classlsd__slam_1_1_notify_buffer_ac077a4a4bb56f5dd9acd551c7c56a3a3}{size} ()
+\item 
+T \hyperlink{classlsd__slam_1_1_notify_buffer_a25b914af4aa669d39f8123364cfbb541}{first} ()
+\item 
+T \hyperlink{classlsd__slam_1_1_notify_buffer_ac16d9abdd418c98b87a8117a9b97eaf6}{pop\-Front} ()
+\item 
+boost\-::recursive\-\_\-mutex \& \hyperlink{classlsd__slam_1_1_notify_buffer_abd90fea9478812fb5b2a0333a2480f23}{get\-Mutex} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$class lsd\-\_\-slam\-::\-Notify\-Buffer$<$ T $>$}
+
+Thread-\/safe limited-\/size buffer which may notify a specific object when a new item becomes available. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classlsd__slam_1_1_notify_buffer_a38032ad4284b2e1f5e92812c52f162d6}{\index{lsd\-\_\-slam\-::\-Notify\-Buffer@{lsd\-\_\-slam\-::\-Notify\-Buffer}!Notify\-Buffer@{Notify\-Buffer}}
+\index{Notify\-Buffer@{Notify\-Buffer}!lsd_slam::NotifyBuffer@{lsd\-\_\-slam\-::\-Notify\-Buffer}}
+\subsubsection[{Notify\-Buffer}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf lsd\-\_\-slam\-::\-Notify\-Buffer}$<$ T $>$\-::{\bf Notify\-Buffer} (
+\begin{DoxyParamCaption}
+\item[{int}]{buffer\-Size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classlsd__slam_1_1_notify_buffer_a38032ad4284b2e1f5e92812c52f162d6}
+Creates a queue with the given maximum size. \hypertarget{classlsd__slam_1_1_notify_buffer_a3933bbbf4b48593399950b251e677299}{\index{lsd\-\_\-slam\-::\-Notify\-Buffer@{lsd\-\_\-slam\-::\-Notify\-Buffer}!Notify\-Buffer@{Notify\-Buffer}}
+\index{Notify\-Buffer@{Notify\-Buffer}!lsd_slam::NotifyBuffer@{lsd\-\_\-slam\-::\-Notify\-Buffer}}
+\subsubsection[{Notify\-Buffer}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf lsd\-\_\-slam\-::\-Notify\-Buffer}$<$ T $>$\-::{\bf Notify\-Buffer} (
+\begin{DoxyParamCaption}
+\item[{int}]{buffer\-Size, }
+\item[{{\bf Notifiable} $\ast$}]{receiver}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classlsd__slam_1_1_notify_buffer_a3933bbbf4b48593399950b251e677299}
+Creates a queue with the given maximum size and \hyperlink{classlsd__slam_1_1_notifiable}{Notifiable} instance which will be notified when a new object becomes available. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classlsd__slam_1_1_notify_buffer_a25b914af4aa669d39f8123364cfbb541}{\index{lsd\-\_\-slam\-::\-Notify\-Buffer@{lsd\-\_\-slam\-::\-Notify\-Buffer}!first@{first}}
+\index{first@{first}!lsd_slam::NotifyBuffer@{lsd\-\_\-slam\-::\-Notify\-Buffer}}
+\subsubsection[{first}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ T {\bf lsd\-\_\-slam\-::\-Notify\-Buffer}$<$ T $>$\-::first (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classlsd__slam_1_1_notify_buffer_a25b914af4aa669d39f8123364cfbb541}
+Returns a copy of the first object. \hypertarget{classlsd__slam_1_1_notify_buffer_abd90fea9478812fb5b2a0333a2480f23}{\index{lsd\-\_\-slam\-::\-Notify\-Buffer@{lsd\-\_\-slam\-::\-Notify\-Buffer}!get\-Mutex@{get\-Mutex}}
+\index{get\-Mutex@{get\-Mutex}!lsd_slam::NotifyBuffer@{lsd\-\_\-slam\-::\-Notify\-Buffer}}
+\subsubsection[{get\-Mutex}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ boost\-::recursive\-\_\-mutex\& {\bf lsd\-\_\-slam\-::\-Notify\-Buffer}$<$ T $>$\-::get\-Mutex (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classlsd__slam_1_1_notify_buffer_abd90fea9478812fb5b2a0333a2480f23}
+Returns the buffer access mutex. Must be locked when checking \hyperlink{classlsd__slam_1_1_notify_buffer_ac077a4a4bb56f5dd9acd551c7c56a3a3}{size()} and waiting if \hyperlink{classlsd__slam_1_1_notify_buffer_ac077a4a4bb56f5dd9acd551c7c56a3a3}{size()} == 0. \hypertarget{classlsd__slam_1_1_notify_buffer_ac16d9abdd418c98b87a8117a9b97eaf6}{\index{lsd\-\_\-slam\-::\-Notify\-Buffer@{lsd\-\_\-slam\-::\-Notify\-Buffer}!pop\-Front@{pop\-Front}}
+\index{pop\-Front@{pop\-Front}!lsd_slam::NotifyBuffer@{lsd\-\_\-slam\-::\-Notify\-Buffer}}
+\subsubsection[{pop\-Front}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ T {\bf lsd\-\_\-slam\-::\-Notify\-Buffer}$<$ T $>$\-::pop\-Front (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classlsd__slam_1_1_notify_buffer_ac16d9abdd418c98b87a8117a9b97eaf6}
+Removes the first object and returns a copy of it.
+
+If there is no object in the queue, blocks until one is available. \hypertarget{classlsd__slam_1_1_notify_buffer_a04532ca3a71447a2b8fa51f5e9db8dd8}{\index{lsd\-\_\-slam\-::\-Notify\-Buffer@{lsd\-\_\-slam\-::\-Notify\-Buffer}!push\-Back@{push\-Back}}
+\index{push\-Back@{push\-Back}!lsd_slam::NotifyBuffer@{lsd\-\_\-slam\-::\-Notify\-Buffer}}
+\subsubsection[{push\-Back}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ bool {\bf lsd\-\_\-slam\-::\-Notify\-Buffer}$<$ T $>$\-::push\-Back (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{object}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classlsd__slam_1_1_notify_buffer_a04532ca3a71447a2b8fa51f5e9db8dd8}
+Adds an object to the back of the queue.
+
+If the queue is full already, discards the object. Returns if there was enough space to add the object. \hypertarget{classlsd__slam_1_1_notify_buffer_abff5c7a6af7790acfc5cc2f83ae541c0}{\index{lsd\-\_\-slam\-::\-Notify\-Buffer@{lsd\-\_\-slam\-::\-Notify\-Buffer}!set\-Receiver@{set\-Receiver}}
+\index{set\-Receiver@{set\-Receiver}!lsd_slam::NotifyBuffer@{lsd\-\_\-slam\-::\-Notify\-Buffer}}
+\subsubsection[{set\-Receiver}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ void {\bf lsd\-\_\-slam\-::\-Notify\-Buffer}$<$ T $>$\-::set\-Receiver (
+\begin{DoxyParamCaption}
+\item[{{\bf Notifiable} $\ast$}]{receiver}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classlsd__slam_1_1_notify_buffer_abff5c7a6af7790acfc5cc2f83ae541c0}
+Sets the notification receiver.
+
+The receiver can be nullptr to disable notifications. \hypertarget{classlsd__slam_1_1_notify_buffer_ac077a4a4bb56f5dd9acd551c7c56a3a3}{\index{lsd\-\_\-slam\-::\-Notify\-Buffer@{lsd\-\_\-slam\-::\-Notify\-Buffer}!size@{size}}
+\index{size@{size}!lsd_slam::NotifyBuffer@{lsd\-\_\-slam\-::\-Notify\-Buffer}}
+\subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ int {\bf lsd\-\_\-slam\-::\-Notify\-Buffer}$<$ T $>$\-::size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classlsd__slam_1_1_notify_buffer_ac077a4a4bb56f5dd9acd551c7c56a3a3}
+Returns the number of objects in the buffer. 
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+/home/king/rgbd-\/slam-\/lets-\/do-\/it/9-\/doxygen/lsd\-\_\-slam/lsd\-\_\-slam\-\_\-core/src/\-I\-O\-Wrapper/Notify\-Buffer.\-h\end{DoxyCompactItemize}

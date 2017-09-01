@@ -1,0 +1,181 @@
+\hypertarget{classlsd__slam_1_1_depth_map}{\section{lsd\-\_\-slam\-:\-:Depth\-Map Class Reference}
+\label{classlsd__slam_1_1_depth_map}\index{lsd\-\_\-slam\-::\-Depth\-Map@{lsd\-\_\-slam\-::\-Depth\-Map}}
+}
+
+
+{\ttfamily \#include $<$Depth\-Map.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classlsd__slam_1_1_depth_map_aa2135ac4d1e7a39b3033d880441f7834}{E\-I\-G\-E\-N\-\_\-\-M\-A\-K\-E\-\_\-\-A\-L\-I\-G\-N\-E\-D\-\_\-\-O\-P\-E\-R\-A\-T\-O\-R\-\_\-\-N\-E\-W {\bfseries Depth\-Map} (int w, int h, const Eigen\-::\-Matrix3f \&K)}\label{classlsd__slam_1_1_depth_map_aa2135ac4d1e7a39b3033d880441f7834}
+
+\item 
+\hypertarget{classlsd__slam_1_1_depth_map_a5a048281592f3b56a1a4c5b1753cbc58}{{\bfseries Depth\-Map} (const \hyperlink{classlsd__slam_1_1_depth_map}{Depth\-Map} \&)=delete}\label{classlsd__slam_1_1_depth_map_a5a048281592f3b56a1a4c5b1753cbc58}
+
+\item 
+\hypertarget{classlsd__slam_1_1_depth_map_a4f37b4a200ded170eebc41b61cab79f7}{\hyperlink{classlsd__slam_1_1_depth_map}{Depth\-Map} \& {\bfseries operator=} (const \hyperlink{classlsd__slam_1_1_depth_map}{Depth\-Map} \&)=delete}\label{classlsd__slam_1_1_depth_map_a4f37b4a200ded170eebc41b61cab79f7}
+
+\item 
+void \hyperlink{classlsd__slam_1_1_depth_map_ab8fc38eab2fd508e7fca49b58787b687}{reset} ()
+\item 
+void \hyperlink{classlsd__slam_1_1_depth_map_a80d89c896825d97dd61021ea8dc904eb}{update\-Keyframe} (std\-::deque$<$ std\-::shared\-\_\-ptr$<$ \hyperlink{classlsd__slam_1_1_frame}{Frame} $>$ $>$ reference\-Frames)
+\item 
+void \hyperlink{classlsd__slam_1_1_depth_map_add52a76d9e4ebdb9f14408bf3e996d8c}{create\-Key\-Frame} (\hyperlink{classlsd__slam_1_1_frame}{Frame} $\ast$new\-\_\-keyframe)
+\item 
+void \hyperlink{classlsd__slam_1_1_depth_map_a30d6435ab093553615696f68e3a157d8}{finalize\-Key\-Frame} ()
+\item 
+\hypertarget{classlsd__slam_1_1_depth_map_ac4fa06d232e9964882dd19cc44a31c3e}{void {\bfseries invalidate} ()}\label{classlsd__slam_1_1_depth_map_ac4fa06d232e9964882dd19cc44a31c3e}
+
+\item 
+\hypertarget{classlsd__slam_1_1_depth_map_a77ffa8175ac0ff7e3d9a6bbe72d7fe93}{bool {\bfseries is\-Valid} ()}\label{classlsd__slam_1_1_depth_map_a77ffa8175ac0ff7e3d9a6bbe72d7fe93}
+
+\item 
+\hypertarget{classlsd__slam_1_1_depth_map_a30565f7b2f6fddff49694a05ddac983d}{int {\bfseries debug\-Plot\-Depth\-Map} ()}\label{classlsd__slam_1_1_depth_map_a30565f7b2f6fddff49694a05ddac983d}
+
+\item 
+\hypertarget{classlsd__slam_1_1_depth_map_aef0161396bb13077d05198f0f5514e4c}{void {\bfseries initialize\-From\-G\-T\-Depth} (\hyperlink{classlsd__slam_1_1_frame}{Frame} $\ast$new\-\_\-frame)}\label{classlsd__slam_1_1_depth_map_aef0161396bb13077d05198f0f5514e4c}
+
+\item 
+\hypertarget{classlsd__slam_1_1_depth_map_ad43f276ef4edee8420460b452929aad4}{void {\bfseries initialize\-Randomly} (\hyperlink{classlsd__slam_1_1_frame}{Frame} $\ast$new\-\_\-frame)}\label{classlsd__slam_1_1_depth_map_ad43f276ef4edee8420460b452929aad4}
+
+\item 
+\hypertarget{classlsd__slam_1_1_depth_map_a79d83f1d1911274ab55d95ebf5e3dab5}{void {\bfseries set\-From\-Existing\-K\-F} (\hyperlink{classlsd__slam_1_1_frame}{Frame} $\ast$kf)}\label{classlsd__slam_1_1_depth_map_a79d83f1d1911274ab55d95ebf5e3dab5}
+
+\item 
+\hypertarget{classlsd__slam_1_1_depth_map_aaad7df1f66aea8294bfddd8bc929bc00}{void {\bfseries add\-Timing\-Sample} ()}\label{classlsd__slam_1_1_depth_map_aaad7df1f66aea8294bfddd8bc929bc00}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classlsd__slam_1_1_depth_map_af1a62216054ed2b6b349582e1c072724}{cv\-::\-Mat {\bfseries debug\-Image\-Hypothesis\-Handling}}\label{classlsd__slam_1_1_depth_map_af1a62216054ed2b6b349582e1c072724}
+
+\item 
+\hypertarget{classlsd__slam_1_1_depth_map_af4b1dbbafb28400c67581b32f39e3c65}{cv\-::\-Mat {\bfseries debug\-Image\-Hypothesis\-Propagation}}\label{classlsd__slam_1_1_depth_map_af4b1dbbafb28400c67581b32f39e3c65}
+
+\item 
+\hypertarget{classlsd__slam_1_1_depth_map_abc457d3baf8123e4d2f4e29362d7ab24}{cv\-::\-Mat {\bfseries debug\-Image\-Stereo\-Lines}}\label{classlsd__slam_1_1_depth_map_abc457d3baf8123e4d2f4e29362d7ab24}
+
+\item 
+\hypertarget{classlsd__slam_1_1_depth_map_a637cbf76ea7e04193cc20dc703d2ccc0}{cv\-::\-Mat {\bfseries debug\-Image\-Depth}}\label{classlsd__slam_1_1_depth_map_a637cbf76ea7e04193cc20dc703d2ccc0}
+
+\item 
+\hypertarget{classlsd__slam_1_1_depth_map_a0293920188f70a06ec1e53f6f127ff12}{float {\bfseries ms\-Update}}\label{classlsd__slam_1_1_depth_map_a0293920188f70a06ec1e53f6f127ff12}
+
+\item 
+\hypertarget{classlsd__slam_1_1_depth_map_ad639f2fda59ef3ceeb6604853968efd3}{float {\bfseries ms\-Create}}\label{classlsd__slam_1_1_depth_map_ad639f2fda59ef3ceeb6604853968efd3}
+
+\item 
+\hypertarget{classlsd__slam_1_1_depth_map_ab185dd9f3fc27093ecf093926c4a6a5e}{float {\bfseries ms\-Finalize}}\label{classlsd__slam_1_1_depth_map_ab185dd9f3fc27093ecf093926c4a6a5e}
+
+\item 
+\hypertarget{classlsd__slam_1_1_depth_map_a8078cd87bf8b167bd24216291bc0b340}{float {\bfseries ms\-Observe}}\label{classlsd__slam_1_1_depth_map_a8078cd87bf8b167bd24216291bc0b340}
+
+\item 
+\hypertarget{classlsd__slam_1_1_depth_map_abc57c33900e6522b380d2637708e9e1f}{float {\bfseries ms\-Regularize}}\label{classlsd__slam_1_1_depth_map_abc57c33900e6522b380d2637708e9e1f}
+
+\item 
+\hypertarget{classlsd__slam_1_1_depth_map_a8e425cd5c9a68bbb156cb5d7e67c6d4d}{float {\bfseries ms\-Propagate}}\label{classlsd__slam_1_1_depth_map_a8e425cd5c9a68bbb156cb5d7e67c6d4d}
+
+\item 
+\hypertarget{classlsd__slam_1_1_depth_map_a28bf86e401d96db20a30a9796677c9f0}{float {\bfseries ms\-Fill\-Holes}}\label{classlsd__slam_1_1_depth_map_a28bf86e401d96db20a30a9796677c9f0}
+
+\item 
+\hypertarget{classlsd__slam_1_1_depth_map_a48a7fceaa3fdbb271778f0648f0bc115}{float {\bfseries ms\-Set\-Depth}}\label{classlsd__slam_1_1_depth_map_a48a7fceaa3fdbb271778f0648f0bc115}
+
+\item 
+\hypertarget{classlsd__slam_1_1_depth_map_a3328c02e1478f7959c5517d98408e9c8}{int {\bfseries n\-Update}}\label{classlsd__slam_1_1_depth_map_a3328c02e1478f7959c5517d98408e9c8}
+
+\item 
+\hypertarget{classlsd__slam_1_1_depth_map_a65b604326ce1a5e9472715dbe2c8ed6f}{int {\bfseries n\-Create}}\label{classlsd__slam_1_1_depth_map_a65b604326ce1a5e9472715dbe2c8ed6f}
+
+\item 
+\hypertarget{classlsd__slam_1_1_depth_map_acb27b62a7248eb9a108adcef78541aff}{int {\bfseries n\-Finalize}}\label{classlsd__slam_1_1_depth_map_acb27b62a7248eb9a108adcef78541aff}
+
+\item 
+\hypertarget{classlsd__slam_1_1_depth_map_a86997fec300a6e9f1646eb1f073d91a4}{int {\bfseries n\-Observe}}\label{classlsd__slam_1_1_depth_map_a86997fec300a6e9f1646eb1f073d91a4}
+
+\item 
+\hypertarget{classlsd__slam_1_1_depth_map_a1578e8f2c0fe257d42661b782cb8e811}{int {\bfseries n\-Regularize}}\label{classlsd__slam_1_1_depth_map_a1578e8f2c0fe257d42661b782cb8e811}
+
+\item 
+\hypertarget{classlsd__slam_1_1_depth_map_a7477c29680584827e22336df0604ba9d}{int {\bfseries n\-Propagate}}\label{classlsd__slam_1_1_depth_map_a7477c29680584827e22336df0604ba9d}
+
+\item 
+\hypertarget{classlsd__slam_1_1_depth_map_ad296834582dab62c4621eac896c30bee}{int {\bfseries n\-Fill\-Holes}}\label{classlsd__slam_1_1_depth_map_ad296834582dab62c4621eac896c30bee}
+
+\item 
+\hypertarget{classlsd__slam_1_1_depth_map_a06395761fbe5b73f2e2cd43095cdbde1}{int {\bfseries n\-Set\-Depth}}\label{classlsd__slam_1_1_depth_map_a06395761fbe5b73f2e2cd43095cdbde1}
+
+\item 
+\hypertarget{classlsd__slam_1_1_depth_map_a23c23f50eb70b90fd4ec83a7cc056cd9}{struct timeval {\bfseries last\-Hz\-Update}}\label{classlsd__slam_1_1_depth_map_a23c23f50eb70b90fd4ec83a7cc056cd9}
+
+\item 
+\hypertarget{classlsd__slam_1_1_depth_map_a131839c5289fea45b006d9177bab12aa}{float {\bfseries n\-Avg\-Update}}\label{classlsd__slam_1_1_depth_map_a131839c5289fea45b006d9177bab12aa}
+
+\item 
+\hypertarget{classlsd__slam_1_1_depth_map_aed7adc9d8d2112785b63eef9899cb1cd}{float {\bfseries n\-Avg\-Create}}\label{classlsd__slam_1_1_depth_map_aed7adc9d8d2112785b63eef9899cb1cd}
+
+\item 
+\hypertarget{classlsd__slam_1_1_depth_map_ab39ca230ecaf2395bcf801868a67da3f}{float {\bfseries n\-Avg\-Finalize}}\label{classlsd__slam_1_1_depth_map_ab39ca230ecaf2395bcf801868a67da3f}
+
+\item 
+\hypertarget{classlsd__slam_1_1_depth_map_a60e43a7f852d4c2d2d32eb47c44168e1}{float {\bfseries n\-Avg\-Observe}}\label{classlsd__slam_1_1_depth_map_a60e43a7f852d4c2d2d32eb47c44168e1}
+
+\item 
+\hypertarget{classlsd__slam_1_1_depth_map_a3ec6d916f8712382ba9052c00db98148}{float {\bfseries n\-Avg\-Regularize}}\label{classlsd__slam_1_1_depth_map_a3ec6d916f8712382ba9052c00db98148}
+
+\item 
+\hypertarget{classlsd__slam_1_1_depth_map_a75f06d356632124077ea0559f44185d9}{float {\bfseries n\-Avg\-Propagate}}\label{classlsd__slam_1_1_depth_map_a75f06d356632124077ea0559f44185d9}
+
+\item 
+\hypertarget{classlsd__slam_1_1_depth_map_a66431a18987966493cb7796d55c0162b}{float {\bfseries n\-Avg\-Fill\-Holes}}\label{classlsd__slam_1_1_depth_map_a66431a18987966493cb7796d55c0162b}
+
+\item 
+\hypertarget{classlsd__slam_1_1_depth_map_a01b2c6e4c011b44a98b50bfbf8d91ddb}{float {\bfseries n\-Avg\-Set\-Depth}}\label{classlsd__slam_1_1_depth_map_a01b2c6e4c011b44a98b50bfbf8d91ddb}
+
+\item 
+\hypertarget{classlsd__slam_1_1_depth_map_a83e8ffca4304e073cb421de05007f15d}{\hyperlink{classlsd__slam_1_1_index_thread_reduce}{Index\-Thread\-Reduce} {\bfseries thread\-Reducer}}\label{classlsd__slam_1_1_depth_map_a83e8ffca4304e073cb421de05007f15d}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Keeps a detailed depth map (consisting of \hyperlink{classlsd__slam_1_1_depth_map_pixel_hypothesis}{Depth\-Map\-Pixel\-Hypothesis}) and does stereo comparisons and regularization to update it. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classlsd__slam_1_1_depth_map_add52a76d9e4ebdb9f14408bf3e996d8c}{\index{lsd\-\_\-slam\-::\-Depth\-Map@{lsd\-\_\-slam\-::\-Depth\-Map}!create\-Key\-Frame@{create\-Key\-Frame}}
+\index{create\-Key\-Frame@{create\-Key\-Frame}!lsd_slam::DepthMap@{lsd\-\_\-slam\-::\-Depth\-Map}}
+\subsubsection[{create\-Key\-Frame}]{\setlength{\rightskip}{0pt plus 5cm}void lsd\-\_\-slam\-::\-Depth\-Map\-::create\-Key\-Frame (
+\begin{DoxyParamCaption}
+\item[{{\bf Frame} $\ast$}]{new\-\_\-keyframe}
+\end{DoxyParamCaption}
+)}}\label{classlsd__slam_1_1_depth_map_add52a76d9e4ebdb9f14408bf3e996d8c}
+does propagation and whole-\/filling-\/regularization (no observation, for that need to call \hyperlink{classlsd__slam_1_1_depth_map_a80d89c896825d97dd61021ea8dc904eb}{update\-Keyframe()}!) \hypertarget{classlsd__slam_1_1_depth_map_a30d6435ab093553615696f68e3a157d8}{\index{lsd\-\_\-slam\-::\-Depth\-Map@{lsd\-\_\-slam\-::\-Depth\-Map}!finalize\-Key\-Frame@{finalize\-Key\-Frame}}
+\index{finalize\-Key\-Frame@{finalize\-Key\-Frame}!lsd_slam::DepthMap@{lsd\-\_\-slam\-::\-Depth\-Map}}
+\subsubsection[{finalize\-Key\-Frame}]{\setlength{\rightskip}{0pt plus 5cm}void lsd\-\_\-slam\-::\-Depth\-Map\-::finalize\-Key\-Frame (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classlsd__slam_1_1_depth_map_a30d6435ab093553615696f68e3a157d8}
+does one fill holes iteration \hypertarget{classlsd__slam_1_1_depth_map_ab8fc38eab2fd508e7fca49b58787b687}{\index{lsd\-\_\-slam\-::\-Depth\-Map@{lsd\-\_\-slam\-::\-Depth\-Map}!reset@{reset}}
+\index{reset@{reset}!lsd_slam::DepthMap@{lsd\-\_\-slam\-::\-Depth\-Map}}
+\subsubsection[{reset}]{\setlength{\rightskip}{0pt plus 5cm}void lsd\-\_\-slam\-::\-Depth\-Map\-::reset (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classlsd__slam_1_1_depth_map_ab8fc38eab2fd508e7fca49b58787b687}
+Resets everything. \hypertarget{classlsd__slam_1_1_depth_map_a80d89c896825d97dd61021ea8dc904eb}{\index{lsd\-\_\-slam\-::\-Depth\-Map@{lsd\-\_\-slam\-::\-Depth\-Map}!update\-Keyframe@{update\-Keyframe}}
+\index{update\-Keyframe@{update\-Keyframe}!lsd_slam::DepthMap@{lsd\-\_\-slam\-::\-Depth\-Map}}
+\subsubsection[{update\-Keyframe}]{\setlength{\rightskip}{0pt plus 5cm}void lsd\-\_\-slam\-::\-Depth\-Map\-::update\-Keyframe (
+\begin{DoxyParamCaption}
+\item[{std\-::deque$<$ std\-::shared\-\_\-ptr$<$ {\bf Frame} $>$ $>$}]{reference\-Frames}
+\end{DoxyParamCaption}
+)}}\label{classlsd__slam_1_1_depth_map_a80d89c896825d97dd61021ea8dc904eb}
+does obervation and regularization only. 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/home/king/rgbd-\/slam-\/lets-\/do-\/it/9-\/doxygen/lsd\-\_\-slam/lsd\-\_\-slam\-\_\-core/src/\-Depth\-Estimation/Depth\-Map.\-h\item 
+/home/king/rgbd-\/slam-\/lets-\/do-\/it/9-\/doxygen/lsd\-\_\-slam/lsd\-\_\-slam\-\_\-core/src/\-Depth\-Estimation/Depth\-Map.\-cpp\end{DoxyCompactItemize}

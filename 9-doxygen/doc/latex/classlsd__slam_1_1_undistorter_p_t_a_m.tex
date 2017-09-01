@@ -1,0 +1,156 @@
+\hypertarget{classlsd__slam_1_1_undistorter_p_t_a_m}{\section{lsd\-\_\-slam\-:\-:Undistorter\-P\-T\-A\-M Class Reference}
+\label{classlsd__slam_1_1_undistorter_p_t_a_m}\index{lsd\-\_\-slam\-::\-Undistorter\-P\-T\-A\-M@{lsd\-\_\-slam\-::\-Undistorter\-P\-T\-A\-M}}
+}
+Inheritance diagram for lsd\-\_\-slam\-:\-:Undistorter\-P\-T\-A\-M\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classlsd__slam_1_1_undistorter_p_t_a_m}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classlsd__slam_1_1_undistorter_p_t_a_m_ac7604cab28f1987264f0da123bcc990a}{Undistorter\-P\-T\-A\-M} (const char $\ast$config\-File\-Name)
+\item 
+\hyperlink{classlsd__slam_1_1_undistorter_p_t_a_m_aa24a3a52c7515c04c503a33a55db2a9b}{$\sim$\-Undistorter\-P\-T\-A\-M} ()
+\item 
+\hypertarget{classlsd__slam_1_1_undistorter_p_t_a_m_a13fe7f2773c8fc5a901a7249fd671b93}{{\bfseries Undistorter\-P\-T\-A\-M} (const \hyperlink{classlsd__slam_1_1_undistorter_p_t_a_m}{Undistorter\-P\-T\-A\-M} \&)=delete}\label{classlsd__slam_1_1_undistorter_p_t_a_m_a13fe7f2773c8fc5a901a7249fd671b93}
+
+\item 
+\hypertarget{classlsd__slam_1_1_undistorter_p_t_a_m_a8ede83714decea8c7af0a3ebcb1b599f}{\hyperlink{classlsd__slam_1_1_undistorter_p_t_a_m}{Undistorter\-P\-T\-A\-M} \& {\bfseries operator=} (const \hyperlink{classlsd__slam_1_1_undistorter_p_t_a_m}{Undistorter\-P\-T\-A\-M} \&)=delete}\label{classlsd__slam_1_1_undistorter_p_t_a_m_a8ede83714decea8c7af0a3ebcb1b599f}
+
+\item 
+void \hyperlink{classlsd__slam_1_1_undistorter_p_t_a_m_a1e74aaffa5269b0b551d05b60419fdab}{undistort} (const cv\-::\-Mat \&image, cv\-::\-Output\-Array result) const 
+\item 
+const cv\-::\-Mat \& \hyperlink{classlsd__slam_1_1_undistorter_p_t_a_m_a1a569488b001379a5e75942a3aad3a0c}{get\-K} () const 
+\item 
+const cv\-::\-Mat \& \hyperlink{classlsd__slam_1_1_undistorter_p_t_a_m_a636b3b0d129929ab125bb9e2affa82c0}{get\-Original\-K} () const 
+\item 
+int \hyperlink{classlsd__slam_1_1_undistorter_p_t_a_m_a8aac80ab1305d330719e59770149ed88}{get\-Output\-Width} () const 
+\item 
+int \hyperlink{classlsd__slam_1_1_undistorter_p_t_a_m_ad5c88236acc3212a3612100f5e5aacb6}{get\-Output\-Height} () const 
+\item 
+int \hyperlink{classlsd__slam_1_1_undistorter_p_t_a_m_a70e1884e007e040d2fb0eb4081fe7520}{get\-Input\-Width} () const 
+\item 
+int \hyperlink{classlsd__slam_1_1_undistorter_p_t_a_m_af63d30f057b5c9a0ca1443c5a021ec2a}{get\-Input\-Height} () const 
+\item 
+bool \hyperlink{classlsd__slam_1_1_undistorter_p_t_a_m_a80d17a49a43a574d19faf26f07acce60}{is\-Valid} () const 
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classlsd__slam_1_1_undistorter_p_t_a_m_ac7604cab28f1987264f0da123bcc990a}{\index{lsd\-\_\-slam\-::\-Undistorter\-P\-T\-A\-M@{lsd\-\_\-slam\-::\-Undistorter\-P\-T\-A\-M}!Undistorter\-P\-T\-A\-M@{Undistorter\-P\-T\-A\-M}}
+\index{Undistorter\-P\-T\-A\-M@{Undistorter\-P\-T\-A\-M}!lsd_slam::UndistorterPTAM@{lsd\-\_\-slam\-::\-Undistorter\-P\-T\-A\-M}}
+\subsubsection[{Undistorter\-P\-T\-A\-M}]{\setlength{\rightskip}{0pt plus 5cm}lsd\-\_\-slam\-::\-Undistorter\-P\-T\-A\-M\-::\-Undistorter\-P\-T\-A\-M (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{config\-File\-Name}
+\end{DoxyParamCaption}
+)}}\label{classlsd__slam_1_1_undistorter_p_t_a_m_ac7604cab28f1987264f0da123bcc990a}
+Creates an \hyperlink{classlsd__slam_1_1_undistorter}{Undistorter} by reading the distortion parameters from a file.
+
+The file format is as follows\-: d1 d2 d3 d4 d5 input\-Width input\-Height crop / full / none output\-Width output\-Height \hypertarget{classlsd__slam_1_1_undistorter_p_t_a_m_aa24a3a52c7515c04c503a33a55db2a9b}{\index{lsd\-\_\-slam\-::\-Undistorter\-P\-T\-A\-M@{lsd\-\_\-slam\-::\-Undistorter\-P\-T\-A\-M}!$\sim$\-Undistorter\-P\-T\-A\-M@{$\sim$\-Undistorter\-P\-T\-A\-M}}
+\index{$\sim$\-Undistorter\-P\-T\-A\-M@{$\sim$\-Undistorter\-P\-T\-A\-M}!lsd_slam::UndistorterPTAM@{lsd\-\_\-slam\-::\-Undistorter\-P\-T\-A\-M}}
+\subsubsection[{$\sim$\-Undistorter\-P\-T\-A\-M}]{\setlength{\rightskip}{0pt plus 5cm}lsd\-\_\-slam\-::\-Undistorter\-P\-T\-A\-M\-::$\sim$\-Undistorter\-P\-T\-A\-M (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classlsd__slam_1_1_undistorter_p_t_a_m_aa24a3a52c7515c04c503a33a55db2a9b}
+Destructor. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classlsd__slam_1_1_undistorter_p_t_a_m_af63d30f057b5c9a0ca1443c5a021ec2a}{\index{lsd\-\_\-slam\-::\-Undistorter\-P\-T\-A\-M@{lsd\-\_\-slam\-::\-Undistorter\-P\-T\-A\-M}!get\-Input\-Height@{get\-Input\-Height}}
+\index{get\-Input\-Height@{get\-Input\-Height}!lsd_slam::UndistorterPTAM@{lsd\-\_\-slam\-::\-Undistorter\-P\-T\-A\-M}}
+\subsubsection[{get\-Input\-Height}]{\setlength{\rightskip}{0pt plus 5cm}int lsd\-\_\-slam\-::\-Undistorter\-P\-T\-A\-M\-::get\-Input\-Height (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classlsd__slam_1_1_undistorter_p_t_a_m_af63d30f057b5c9a0ca1443c5a021ec2a}
+Returns the height of the input images in pixels. 
+
+Implements \hyperlink{classlsd__slam_1_1_undistorter_a673e446ee77a3bbb3e934e541963612a}{lsd\-\_\-slam\-::\-Undistorter}.
+
+\hypertarget{classlsd__slam_1_1_undistorter_p_t_a_m_a70e1884e007e040d2fb0eb4081fe7520}{\index{lsd\-\_\-slam\-::\-Undistorter\-P\-T\-A\-M@{lsd\-\_\-slam\-::\-Undistorter\-P\-T\-A\-M}!get\-Input\-Width@{get\-Input\-Width}}
+\index{get\-Input\-Width@{get\-Input\-Width}!lsd_slam::UndistorterPTAM@{lsd\-\_\-slam\-::\-Undistorter\-P\-T\-A\-M}}
+\subsubsection[{get\-Input\-Width}]{\setlength{\rightskip}{0pt plus 5cm}int lsd\-\_\-slam\-::\-Undistorter\-P\-T\-A\-M\-::get\-Input\-Width (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classlsd__slam_1_1_undistorter_p_t_a_m_a70e1884e007e040d2fb0eb4081fe7520}
+Returns the width of the input images in pixels. 
+
+Implements \hyperlink{classlsd__slam_1_1_undistorter_ad809f3b69500eae5f689a60ca766dd2e}{lsd\-\_\-slam\-::\-Undistorter}.
+
+\hypertarget{classlsd__slam_1_1_undistorter_p_t_a_m_a1a569488b001379a5e75942a3aad3a0c}{\index{lsd\-\_\-slam\-::\-Undistorter\-P\-T\-A\-M@{lsd\-\_\-slam\-::\-Undistorter\-P\-T\-A\-M}!get\-K@{get\-K}}
+\index{get\-K@{get\-K}!lsd_slam::UndistorterPTAM@{lsd\-\_\-slam\-::\-Undistorter\-P\-T\-A\-M}}
+\subsubsection[{get\-K}]{\setlength{\rightskip}{0pt plus 5cm}const cv\-::\-Mat \& lsd\-\_\-slam\-::\-Undistorter\-P\-T\-A\-M\-::get\-K (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classlsd__slam_1_1_undistorter_p_t_a_m_a1a569488b001379a5e75942a3aad3a0c}
+Returns the intrinsic parameter matrix of the undistorted images. 
+
+Implements \hyperlink{classlsd__slam_1_1_undistorter_ad1e2c7f6b622c6c3055fb895ba9956c4}{lsd\-\_\-slam\-::\-Undistorter}.
+
+\hypertarget{classlsd__slam_1_1_undistorter_p_t_a_m_a636b3b0d129929ab125bb9e2affa82c0}{\index{lsd\-\_\-slam\-::\-Undistorter\-P\-T\-A\-M@{lsd\-\_\-slam\-::\-Undistorter\-P\-T\-A\-M}!get\-Original\-K@{get\-Original\-K}}
+\index{get\-Original\-K@{get\-Original\-K}!lsd_slam::UndistorterPTAM@{lsd\-\_\-slam\-::\-Undistorter\-P\-T\-A\-M}}
+\subsubsection[{get\-Original\-K}]{\setlength{\rightskip}{0pt plus 5cm}const cv\-::\-Mat \& lsd\-\_\-slam\-::\-Undistorter\-P\-T\-A\-M\-::get\-Original\-K (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classlsd__slam_1_1_undistorter_p_t_a_m_a636b3b0d129929ab125bb9e2affa82c0}
+Returns the intrinsic parameter matrix of the original images, 
+
+Implements \hyperlink{classlsd__slam_1_1_undistorter_aa53850c410d84266cc682db6ab37a7a1}{lsd\-\_\-slam\-::\-Undistorter}.
+
+\hypertarget{classlsd__slam_1_1_undistorter_p_t_a_m_ad5c88236acc3212a3612100f5e5aacb6}{\index{lsd\-\_\-slam\-::\-Undistorter\-P\-T\-A\-M@{lsd\-\_\-slam\-::\-Undistorter\-P\-T\-A\-M}!get\-Output\-Height@{get\-Output\-Height}}
+\index{get\-Output\-Height@{get\-Output\-Height}!lsd_slam::UndistorterPTAM@{lsd\-\_\-slam\-::\-Undistorter\-P\-T\-A\-M}}
+\subsubsection[{get\-Output\-Height}]{\setlength{\rightskip}{0pt plus 5cm}int lsd\-\_\-slam\-::\-Undistorter\-P\-T\-A\-M\-::get\-Output\-Height (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classlsd__slam_1_1_undistorter_p_t_a_m_ad5c88236acc3212a3612100f5e5aacb6}
+Returns the height of the undistorted images in pixels. 
+
+Implements \hyperlink{classlsd__slam_1_1_undistorter_a72dc7d213c5fd408c586158c30578276}{lsd\-\_\-slam\-::\-Undistorter}.
+
+\hypertarget{classlsd__slam_1_1_undistorter_p_t_a_m_a8aac80ab1305d330719e59770149ed88}{\index{lsd\-\_\-slam\-::\-Undistorter\-P\-T\-A\-M@{lsd\-\_\-slam\-::\-Undistorter\-P\-T\-A\-M}!get\-Output\-Width@{get\-Output\-Width}}
+\index{get\-Output\-Width@{get\-Output\-Width}!lsd_slam::UndistorterPTAM@{lsd\-\_\-slam\-::\-Undistorter\-P\-T\-A\-M}}
+\subsubsection[{get\-Output\-Width}]{\setlength{\rightskip}{0pt plus 5cm}int lsd\-\_\-slam\-::\-Undistorter\-P\-T\-A\-M\-::get\-Output\-Width (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classlsd__slam_1_1_undistorter_p_t_a_m_a8aac80ab1305d330719e59770149ed88}
+Returns the width of the undistorted images in pixels. 
+
+Implements \hyperlink{classlsd__slam_1_1_undistorter_aefaf2aec48ea920aac875c7da945efec}{lsd\-\_\-slam\-::\-Undistorter}.
+
+\hypertarget{classlsd__slam_1_1_undistorter_p_t_a_m_a80d17a49a43a574d19faf26f07acce60}{\index{lsd\-\_\-slam\-::\-Undistorter\-P\-T\-A\-M@{lsd\-\_\-slam\-::\-Undistorter\-P\-T\-A\-M}!is\-Valid@{is\-Valid}}
+\index{is\-Valid@{is\-Valid}!lsd_slam::UndistorterPTAM@{lsd\-\_\-slam\-::\-Undistorter\-P\-T\-A\-M}}
+\subsubsection[{is\-Valid}]{\setlength{\rightskip}{0pt plus 5cm}bool lsd\-\_\-slam\-::\-Undistorter\-P\-T\-A\-M\-::is\-Valid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classlsd__slam_1_1_undistorter_p_t_a_m_a80d17a49a43a574d19faf26f07acce60}
+Returns if the undistorter was initialized successfully. 
+
+Implements \hyperlink{classlsd__slam_1_1_undistorter_a449d951327590c333da0432e6bac7b14}{lsd\-\_\-slam\-::\-Undistorter}.
+
+\hypertarget{classlsd__slam_1_1_undistorter_p_t_a_m_a1e74aaffa5269b0b551d05b60419fdab}{\index{lsd\-\_\-slam\-::\-Undistorter\-P\-T\-A\-M@{lsd\-\_\-slam\-::\-Undistorter\-P\-T\-A\-M}!undistort@{undistort}}
+\index{undistort@{undistort}!lsd_slam::UndistorterPTAM@{lsd\-\_\-slam\-::\-Undistorter\-P\-T\-A\-M}}
+\subsubsection[{undistort}]{\setlength{\rightskip}{0pt plus 5cm}void lsd\-\_\-slam\-::\-Undistorter\-P\-T\-A\-M\-::undistort (
+\begin{DoxyParamCaption}
+\item[{const cv\-::\-Mat \&}]{image, }
+\item[{cv\-::\-Output\-Array}]{result}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classlsd__slam_1_1_undistorter_p_t_a_m_a1e74aaffa5269b0b551d05b60419fdab}
+Undistorts the given image and returns the result image. 
+
+Implements \hyperlink{classlsd__slam_1_1_undistorter_a63a7b454de8e39827baf388475a013c0}{lsd\-\_\-slam\-::\-Undistorter}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/home/king/rgbd-\/slam-\/lets-\/do-\/it/9-\/doxygen/lsd\-\_\-slam/lsd\-\_\-slam\-\_\-core/src/util/Undistorter.\-h\item 
+/home/king/rgbd-\/slam-\/lets-\/do-\/it/9-\/doxygen/lsd\-\_\-slam/lsd\-\_\-slam\-\_\-core/src/util/Undistorter.\-cpp\end{DoxyCompactItemize}

@@ -1,0 +1,71 @@
+\hypertarget{classlsd__slam_1_1_trackable_key_frame_search}{\section{lsd\-\_\-slam\-:\-:Trackable\-Key\-Frame\-Search Class Reference}
+\label{classlsd__slam_1_1_trackable_key_frame_search}\index{lsd\-\_\-slam\-::\-Trackable\-Key\-Frame\-Search@{lsd\-\_\-slam\-::\-Trackable\-Key\-Frame\-Search}}
+}
+
+
+{\ttfamily \#include $<$Trackable\-Key\-Frame\-Search.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+E\-I\-G\-E\-N\-\_\-\-M\-A\-K\-E\-\_\-\-A\-L\-I\-G\-N\-E\-D\-\_\-\-O\-P\-E\-R\-A\-T\-O\-R\-\_\-\-N\-E\-W \hyperlink{classlsd__slam_1_1_trackable_key_frame_search_a41d0945dc6b44075e3c1f97ec9c794ca}{Trackable\-Key\-Frame\-Search} (\hyperlink{classlsd__slam_1_1_key_frame_graph}{Key\-Frame\-Graph} $\ast$graph, int w, int h, Eigen\-::\-Matrix3f K)
+\item 
+std\-::unordered\-\_\-set$<$ \hyperlink{classlsd__slam_1_1_frame}{Frame} \\*
+$\ast$, std\-::hash$<$ \hyperlink{classlsd__slam_1_1_frame}{Frame} $\ast$ $>$\\*
+, std\-::equal\-\_\-to$<$ \hyperlink{classlsd__slam_1_1_frame}{Frame} $\ast$ $>$\\*
+, Eigen\-::aligned\-\_\-allocator\\*
+$<$ \hyperlink{classlsd__slam_1_1_frame}{Frame} $\ast$ $>$ $>$ \hyperlink{classlsd__slam_1_1_trackable_key_frame_search_a7b90c891f259e6791e904d053bc64429}{find\-Candidates} (\hyperlink{classlsd__slam_1_1_frame}{Frame} $\ast$keyframe, \hyperlink{classlsd__slam_1_1_frame}{Frame} $\ast$\&fab\-Map\-Result\-\_\-out, bool include\-F\-A\-B\-M\-A\-P=true, bool closeness\-T\-H=1.\-0)
+\item 
+\hypertarget{classlsd__slam_1_1_trackable_key_frame_search_a98f19cacc8134fcd162e4e3e4edc6bc0}{\hyperlink{classlsd__slam_1_1_frame}{Frame} $\ast$ {\bfseries find\-Re\-Position\-Candidate} (\hyperlink{classlsd__slam_1_1_frame}{Frame} $\ast$frame, float max\-Score=1)}\label{classlsd__slam_1_1_trackable_key_frame_search_a98f19cacc8134fcd162e4e3e4edc6bc0}
+
+\item 
+\hypertarget{classlsd__slam_1_1_trackable_key_frame_search_ada972e7c78a96121fab5ad847d414610}{float {\bfseries get\-Ref\-Frame\-Score} (float distance\-Squared, float usage)}\label{classlsd__slam_1_1_trackable_key_frame_search_ada972e7c78a96121fab5ad847d414610}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classlsd__slam_1_1_trackable_key_frame_search_ae15ea61d88814e4fb3b118a645513dd9}{float {\bfseries ms\-Track\-Perma\-Ref}}\label{classlsd__slam_1_1_trackable_key_frame_search_ae15ea61d88814e4fb3b118a645513dd9}
+
+\item 
+\hypertarget{classlsd__slam_1_1_trackable_key_frame_search_a72fdf50c05825cc831f0c298e6e36027}{int {\bfseries n\-Track\-Perma\-Ref}}\label{classlsd__slam_1_1_trackable_key_frame_search_a72fdf50c05825cc831f0c298e6e36027}
+
+\item 
+\hypertarget{classlsd__slam_1_1_trackable_key_frame_search_ab33e20b88f3a428685d8cc030609b651}{float {\bfseries n\-Avg\-Track\-Perma\-Ref}}\label{classlsd__slam_1_1_trackable_key_frame_search_ab33e20b88f3a428685d8cc030609b651}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Given a Key\-Frame, tries to find other Key\-Frames from a \hyperlink{classlsd__slam_1_1_key_frame_graph}{Key\-Frame\-Graph} which can be tracked from this frame (in order to insert new constraints into the graph). 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classlsd__slam_1_1_trackable_key_frame_search_a41d0945dc6b44075e3c1f97ec9c794ca}{\index{lsd\-\_\-slam\-::\-Trackable\-Key\-Frame\-Search@{lsd\-\_\-slam\-::\-Trackable\-Key\-Frame\-Search}!Trackable\-Key\-Frame\-Search@{Trackable\-Key\-Frame\-Search}}
+\index{Trackable\-Key\-Frame\-Search@{Trackable\-Key\-Frame\-Search}!lsd_slam::TrackableKeyFrameSearch@{lsd\-\_\-slam\-::\-Trackable\-Key\-Frame\-Search}}
+\subsubsection[{Trackable\-Key\-Frame\-Search}]{\setlength{\rightskip}{0pt plus 5cm}lsd\-\_\-slam\-::\-Trackable\-Key\-Frame\-Search\-::\-Trackable\-Key\-Frame\-Search (
+\begin{DoxyParamCaption}
+\item[{{\bf Key\-Frame\-Graph} $\ast$}]{graph, }
+\item[{int}]{w, }
+\item[{int}]{h, }
+\item[{Eigen\-::\-Matrix3f}]{K}
+\end{DoxyParamCaption}
+)}}\label{classlsd__slam_1_1_trackable_key_frame_search_a41d0945dc6b44075e3c1f97ec9c794ca}
+Constructor. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classlsd__slam_1_1_trackable_key_frame_search_a7b90c891f259e6791e904d053bc64429}{\index{lsd\-\_\-slam\-::\-Trackable\-Key\-Frame\-Search@{lsd\-\_\-slam\-::\-Trackable\-Key\-Frame\-Search}!find\-Candidates@{find\-Candidates}}
+\index{find\-Candidates@{find\-Candidates}!lsd_slam::TrackableKeyFrameSearch@{lsd\-\_\-slam\-::\-Trackable\-Key\-Frame\-Search}}
+\subsubsection[{find\-Candidates}]{\setlength{\rightskip}{0pt plus 5cm}std\-::unordered\-\_\-set$<$ {\bf Frame} $\ast$, std\-::hash$<$ {\bf Frame} $\ast$ $>$, std\-::equal\-\_\-to$<$ {\bf Frame} $\ast$ $>$, Eigen\-::aligned\-\_\-allocator$<$ {\bf Frame} $\ast$ $>$ $>$ lsd\-\_\-slam\-::\-Trackable\-Key\-Frame\-Search\-::find\-Candidates (
+\begin{DoxyParamCaption}
+\item[{{\bf Frame} $\ast$}]{keyframe, }
+\item[{{\bf Frame} $\ast$\&}]{fab\-Map\-Result\-\_\-out, }
+\item[{bool}]{include\-F\-A\-B\-M\-A\-P = {\ttfamily true}, }
+\item[{bool}]{closeness\-T\-H = {\ttfamily 1.0}}
+\end{DoxyParamCaption}
+)}}\label{classlsd__slam_1_1_trackable_key_frame_search_a7b90c891f259e6791e904d053bc64429}
+Finds candidates for trackable frames. Returns the most likely candidates first. 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/home/king/rgbd-\/slam-\/lets-\/do-\/it/9-\/doxygen/lsd\-\_\-slam/lsd\-\_\-slam\-\_\-core/src/\-Global\-Mapping/Trackable\-Key\-Frame\-Search.\-h\item 
+/home/king/rgbd-\/slam-\/lets-\/do-\/it/9-\/doxygen/lsd\-\_\-slam/lsd\-\_\-slam\-\_\-core/src/\-Global\-Mapping/Trackable\-Key\-Frame\-Search.\-cpp\end{DoxyCompactItemize}

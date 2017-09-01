@@ -1,0 +1,165 @@
+\hypertarget{classlsd__slam_1_1_key_frame_graph}{\section{lsd\-\_\-slam\-:\-:Key\-Frame\-Graph Class Reference}
+\label{classlsd__slam_1_1_key_frame_graph}\index{lsd\-\_\-slam\-::\-Key\-Frame\-Graph@{lsd\-\_\-slam\-::\-Key\-Frame\-Graph}}
+}
+
+
+{\ttfamily \#include $<$Key\-Frame\-Graph.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+E\-I\-G\-E\-N\-\_\-\-M\-A\-K\-E\-\_\-\-A\-L\-I\-G\-N\-E\-D\-\_\-\-O\-P\-E\-R\-A\-T\-O\-R\-\_\-\-N\-E\-W \hyperlink{classlsd__slam_1_1_key_frame_graph_a998e4c0fe64cb8f8aa59163cc68bf176}{Key\-Frame\-Graph} ()
+\item 
+\hyperlink{classlsd__slam_1_1_key_frame_graph_a0fb3ba7d0f694dce13c9da32a47f09fd}{$\sim$\-Key\-Frame\-Graph} ()
+\item 
+void \hyperlink{classlsd__slam_1_1_key_frame_graph_a3a8b7205a3f3e8702bf4c74abd7fccf5}{add\-Key\-Frame} (\hyperlink{classlsd__slam_1_1_frame}{Frame} $\ast$frame)
+\item 
+void \hyperlink{classlsd__slam_1_1_key_frame_graph_a5e04ab1456118e86090ae4baa736c0d5}{add\-Frame} (\hyperlink{classlsd__slam_1_1_frame}{Frame} $\ast$frame)
+\item 
+\hypertarget{classlsd__slam_1_1_key_frame_graph_a02a50466a5ff143c8e68cbca1a495efe}{void {\bfseries dump\-Map} (std\-::string folder)}\label{classlsd__slam_1_1_key_frame_graph_a02a50466a5ff143c8e68cbca1a495efe}
+
+\item 
+void \hyperlink{classlsd__slam_1_1_key_frame_graph_a0e4cf71471fcea9fc3aa5fab8c3aa2a3}{insert\-Constraint} (\hyperlink{structlsd__slam_1_1_k_f_constraint_struct}{K\-F\-Constraint\-Struct} $\ast$constraint)
+\item 
+int \hyperlink{classlsd__slam_1_1_key_frame_graph_a222149dbc9f7a35bb5e97d6aa6580b14}{optimize} (int num\-\_\-iterations)
+\item 
+\hypertarget{classlsd__slam_1_1_key_frame_graph_aa99125c2838d861bf5737ee9b9568d89}{bool {\bfseries add\-Elements\-From\-Buffer} ()}\label{classlsd__slam_1_1_key_frame_graph_aa99125c2838d861bf5737ee9b9568d89}
+
+\item 
+void \hyperlink{classlsd__slam_1_1_key_frame_graph_a01cb0488a64d79a500265d9096b6a014}{calculate\-Graph\-Distances\-To\-Frame} (\hyperlink{classlsd__slam_1_1_frame}{Frame} $\ast$frame, std\-::unordered\-\_\-map$<$ \hyperlink{classlsd__slam_1_1_frame}{Frame} $\ast$, int $>$ $\ast$distance\-Map)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classlsd__slam_1_1_key_frame_graph_a8ec7de131b7f76f8ec2e39a61749df2c}{int {\bfseries total\-Points}}\label{classlsd__slam_1_1_key_frame_graph_a8ec7de131b7f76f8ec2e39a61749df2c}
+
+\item 
+\hypertarget{classlsd__slam_1_1_key_frame_graph_a8748ec0a5f59cf2ce97897564bf33cae}{int {\bfseries total\-Edges}}\label{classlsd__slam_1_1_key_frame_graph_a8748ec0a5f59cf2ce97897564bf33cae}
+
+\item 
+\hypertarget{classlsd__slam_1_1_key_frame_graph_aac32e1096f7100dd4d53f362a72d274c}{int {\bfseries total\-Vertices}}\label{classlsd__slam_1_1_key_frame_graph_aac32e1096f7100dd4d53f362a72d274c}
+
+\item 
+\hypertarget{classlsd__slam_1_1_key_frame_graph_a83c40c8d72058ddc99962be77f53e4a6}{boost\-::shared\-\_\-mutex {\bfseries keyframes\-All\-Mutex}}\label{classlsd__slam_1_1_key_frame_graph_a83c40c8d72058ddc99962be77f53e4a6}
+
+\item 
+\hypertarget{classlsd__slam_1_1_key_frame_graph_a7af6ef4d5240a03c7871f64ab96c67cc}{std\-::vector$<$ \hyperlink{classlsd__slam_1_1_frame}{Frame} \\*
+$\ast$, Eigen\-::aligned\-\_\-allocator\\*
+$<$ \hyperlink{classlsd__slam_1_1_frame}{Frame} $\ast$ $>$ $>$ {\bfseries keyframes\-All}}\label{classlsd__slam_1_1_key_frame_graph_a7af6ef4d5240a03c7871f64ab96c67cc}
+
+\item 
+boost\-::shared\-\_\-mutex \hyperlink{classlsd__slam_1_1_key_frame_graph_aec658110a47437fdf2aa9c2fe2a074b4}{id\-To\-Key\-Frame\-Mutex}
+\item 
+\hypertarget{classlsd__slam_1_1_key_frame_graph_a478514f46156cc94b4fdc2479fa2323c}{std\-::unordered\-\_\-map$<$ int, \\*
+std\-::shared\-\_\-ptr$<$ \hyperlink{classlsd__slam_1_1_frame}{Frame} $>$\\*
+, std\-::hash$<$ int $>$\\*
+, std\-::equal\-\_\-to$<$ int $>$\\*
+, Eigen\-::aligned\-\_\-allocator\\*
+$<$ std\-::pair$<$ const int, \\*
+std\-::shared\-\_\-ptr$<$ \hyperlink{classlsd__slam_1_1_frame}{Frame} $>$ $>$ $>$ $>$ {\bfseries id\-To\-Key\-Frame}}\label{classlsd__slam_1_1_key_frame_graph_a478514f46156cc94b4fdc2479fa2323c}
+
+\item 
+\hypertarget{classlsd__slam_1_1_key_frame_graph_a3fcdb72f14397979e235c2e9ee2112ed}{boost\-::shared\-\_\-mutex {\bfseries edges\-Lists\-Mutex}}\label{classlsd__slam_1_1_key_frame_graph_a3fcdb72f14397979e235c2e9ee2112ed}
+
+\item 
+\hypertarget{classlsd__slam_1_1_key_frame_graph_a980d0a66a121b0616b273b5324a0c37e}{std\-::vector\\*
+$<$ \hyperlink{structlsd__slam_1_1_k_f_constraint_struct}{K\-F\-Constraint\-Struct} \\*
+$\ast$, Eigen\-::aligned\-\_\-allocator\\*
+$<$ \hyperlink{structlsd__slam_1_1_k_f_constraint_struct}{K\-F\-Constraint\-Struct} $\ast$ $>$ $>$ {\bfseries edges\-All}}\label{classlsd__slam_1_1_key_frame_graph_a980d0a66a121b0616b273b5324a0c37e}
+
+\item 
+\hypertarget{classlsd__slam_1_1_key_frame_graph_a4cefb6b0075686d087b819a8458cce16}{boost\-::shared\-\_\-mutex {\bfseries all\-Frame\-Poses\-Mutex}}\label{classlsd__slam_1_1_key_frame_graph_a4cefb6b0075686d087b819a8458cce16}
+
+\item 
+\hypertarget{classlsd__slam_1_1_key_frame_graph_a9fe24ef732e68d2cc21efddcdf05e5ee}{std\-::vector$<$ \hyperlink{classlsd__slam_1_1_frame_pose_struct}{Frame\-Pose\-Struct} \\*
+$\ast$, Eigen\-::aligned\-\_\-allocator\\*
+$<$ \hyperlink{classlsd__slam_1_1_frame_pose_struct}{Frame\-Pose\-Struct} $\ast$ $>$ $>$ {\bfseries all\-Frame\-Poses}}\label{classlsd__slam_1_1_key_frame_graph_a9fe24ef732e68d2cc21efddcdf05e5ee}
+
+\item 
+\hypertarget{classlsd__slam_1_1_key_frame_graph_a0d165eb656f77b3737066a4cb855309b}{boost\-::mutex {\bfseries keyframes\-For\-Retrack\-Mutex}}\label{classlsd__slam_1_1_key_frame_graph_a0d165eb656f77b3737066a4cb855309b}
+
+\item 
+\hypertarget{classlsd__slam_1_1_key_frame_graph_a4c9313e998900b25bc1f1e090f0b1080}{std\-::deque$<$ \hyperlink{classlsd__slam_1_1_frame}{Frame} $\ast$ $>$ {\bfseries keyframes\-For\-Retrack}}\label{classlsd__slam_1_1_key_frame_graph_a4c9313e998900b25bc1f1e090f0b1080}
+
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classlsd__slam_1_1_key_frame_graph_a58b23779ede944b1716e0ffd20b379ae}{class {\bfseries Integration\-Test}}\label{classlsd__slam_1_1_key_frame_graph_a58b23779ede944b1716e0ffd20b379ae}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Graph consisting of Key\-Frames and constraints, performing optimization. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classlsd__slam_1_1_key_frame_graph_a998e4c0fe64cb8f8aa59163cc68bf176}{\index{lsd\-\_\-slam\-::\-Key\-Frame\-Graph@{lsd\-\_\-slam\-::\-Key\-Frame\-Graph}!Key\-Frame\-Graph@{Key\-Frame\-Graph}}
+\index{Key\-Frame\-Graph@{Key\-Frame\-Graph}!lsd_slam::KeyFrameGraph@{lsd\-\_\-slam\-::\-Key\-Frame\-Graph}}
+\subsubsection[{Key\-Frame\-Graph}]{\setlength{\rightskip}{0pt plus 5cm}lsd\-\_\-slam\-::\-Key\-Frame\-Graph\-::\-Key\-Frame\-Graph (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classlsd__slam_1_1_key_frame_graph_a998e4c0fe64cb8f8aa59163cc68bf176}
+Constructs an empty pose graph. \hypertarget{classlsd__slam_1_1_key_frame_graph_a0fb3ba7d0f694dce13c9da32a47f09fd}{\index{lsd\-\_\-slam\-::\-Key\-Frame\-Graph@{lsd\-\_\-slam\-::\-Key\-Frame\-Graph}!$\sim$\-Key\-Frame\-Graph@{$\sim$\-Key\-Frame\-Graph}}
+\index{$\sim$\-Key\-Frame\-Graph@{$\sim$\-Key\-Frame\-Graph}!lsd_slam::KeyFrameGraph@{lsd\-\_\-slam\-::\-Key\-Frame\-Graph}}
+\subsubsection[{$\sim$\-Key\-Frame\-Graph}]{\setlength{\rightskip}{0pt plus 5cm}lsd\-\_\-slam\-::\-Key\-Frame\-Graph\-::$\sim$\-Key\-Frame\-Graph (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classlsd__slam_1_1_key_frame_graph_a0fb3ba7d0f694dce13c9da32a47f09fd}
+Deletes the g2o graph. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classlsd__slam_1_1_key_frame_graph_a5e04ab1456118e86090ae4baa736c0d5}{\index{lsd\-\_\-slam\-::\-Key\-Frame\-Graph@{lsd\-\_\-slam\-::\-Key\-Frame\-Graph}!add\-Frame@{add\-Frame}}
+\index{add\-Frame@{add\-Frame}!lsd_slam::KeyFrameGraph@{lsd\-\_\-slam\-::\-Key\-Frame\-Graph}}
+\subsubsection[{add\-Frame}]{\setlength{\rightskip}{0pt plus 5cm}void lsd\-\_\-slam\-::\-Key\-Frame\-Graph\-::add\-Frame (
+\begin{DoxyParamCaption}
+\item[{{\bf Frame} $\ast$}]{frame}
+\end{DoxyParamCaption}
+)}}\label{classlsd__slam_1_1_key_frame_graph_a5e04ab1456118e86090ae4baa736c0d5}
+Adds a new \hyperlink{classlsd__slam_1_1_frame}{Frame} to the graph. Doesnt actually keep the frame, but only it's pose-\/struct. \hypertarget{classlsd__slam_1_1_key_frame_graph_a3a8b7205a3f3e8702bf4c74abd7fccf5}{\index{lsd\-\_\-slam\-::\-Key\-Frame\-Graph@{lsd\-\_\-slam\-::\-Key\-Frame\-Graph}!add\-Key\-Frame@{add\-Key\-Frame}}
+\index{add\-Key\-Frame@{add\-Key\-Frame}!lsd_slam::KeyFrameGraph@{lsd\-\_\-slam\-::\-Key\-Frame\-Graph}}
+\subsubsection[{add\-Key\-Frame}]{\setlength{\rightskip}{0pt plus 5cm}void lsd\-\_\-slam\-::\-Key\-Frame\-Graph\-::add\-Key\-Frame (
+\begin{DoxyParamCaption}
+\item[{{\bf Frame} $\ast$}]{frame}
+\end{DoxyParamCaption}
+)}}\label{classlsd__slam_1_1_key_frame_graph_a3a8b7205a3f3e8702bf4c74abd7fccf5}
+Adds a new Key\-Frame to the graph. \hypertarget{classlsd__slam_1_1_key_frame_graph_a01cb0488a64d79a500265d9096b6a014}{\index{lsd\-\_\-slam\-::\-Key\-Frame\-Graph@{lsd\-\_\-slam\-::\-Key\-Frame\-Graph}!calculate\-Graph\-Distances\-To\-Frame@{calculate\-Graph\-Distances\-To\-Frame}}
+\index{calculate\-Graph\-Distances\-To\-Frame@{calculate\-Graph\-Distances\-To\-Frame}!lsd_slam::KeyFrameGraph@{lsd\-\_\-slam\-::\-Key\-Frame\-Graph}}
+\subsubsection[{calculate\-Graph\-Distances\-To\-Frame}]{\setlength{\rightskip}{0pt plus 5cm}void lsd\-\_\-slam\-::\-Key\-Frame\-Graph\-::calculate\-Graph\-Distances\-To\-Frame (
+\begin{DoxyParamCaption}
+\item[{{\bf Frame} $\ast$}]{frame, }
+\item[{std\-::unordered\-\_\-map$<$ {\bf Frame} $\ast$, int $>$ $\ast$}]{distance\-Map}
+\end{DoxyParamCaption}
+)}}\label{classlsd__slam_1_1_key_frame_graph_a01cb0488a64d79a500265d9096b6a014}
+Creates a hash map of keyframe -\/$>$ distance to given frame. \hypertarget{classlsd__slam_1_1_key_frame_graph_a0e4cf71471fcea9fc3aa5fab8c3aa2a3}{\index{lsd\-\_\-slam\-::\-Key\-Frame\-Graph@{lsd\-\_\-slam\-::\-Key\-Frame\-Graph}!insert\-Constraint@{insert\-Constraint}}
+\index{insert\-Constraint@{insert\-Constraint}!lsd_slam::KeyFrameGraph@{lsd\-\_\-slam\-::\-Key\-Frame\-Graph}}
+\subsubsection[{insert\-Constraint}]{\setlength{\rightskip}{0pt plus 5cm}void lsd\-\_\-slam\-::\-Key\-Frame\-Graph\-::insert\-Constraint (
+\begin{DoxyParamCaption}
+\item[{{\bf K\-F\-Constraint\-Struct} $\ast$}]{constraint}
+\end{DoxyParamCaption}
+)}}\label{classlsd__slam_1_1_key_frame_graph_a0e4cf71471fcea9fc3aa5fab8c3aa2a3}
+Adds a new constraint to the graph.
+
+The transformation must map world points such that they move as if attached to a frame which moves from first\-Frame to second\-Frame\-: second-\/$>$cam\-To\-World $\ast$ first-\/$>$world\-To\-Cam $\ast$ point
+
+If is\-Odometry\-Constraint is set, scale\-Information is ignored. \hypertarget{classlsd__slam_1_1_key_frame_graph_a222149dbc9f7a35bb5e97d6aa6580b14}{\index{lsd\-\_\-slam\-::\-Key\-Frame\-Graph@{lsd\-\_\-slam\-::\-Key\-Frame\-Graph}!optimize@{optimize}}
+\index{optimize@{optimize}!lsd_slam::KeyFrameGraph@{lsd\-\_\-slam\-::\-Key\-Frame\-Graph}}
+\subsubsection[{optimize}]{\setlength{\rightskip}{0pt plus 5cm}int lsd\-\_\-slam\-::\-Key\-Frame\-Graph\-::optimize (
+\begin{DoxyParamCaption}
+\item[{int}]{num\-\_\-iterations}
+\end{DoxyParamCaption}
+)}}\label{classlsd__slam_1_1_key_frame_graph_a222149dbc9f7a35bb5e97d6aa6580b14}
+Optimizes the graph. Does not update the keyframe poses, only the vertex poses. You must call update\-Key\-Frame\-Poses() afterwards. 
+
+\subsection{Member Data Documentation}
+\hypertarget{classlsd__slam_1_1_key_frame_graph_aec658110a47437fdf2aa9c2fe2a074b4}{\index{lsd\-\_\-slam\-::\-Key\-Frame\-Graph@{lsd\-\_\-slam\-::\-Key\-Frame\-Graph}!id\-To\-Key\-Frame\-Mutex@{id\-To\-Key\-Frame\-Mutex}}
+\index{id\-To\-Key\-Frame\-Mutex@{id\-To\-Key\-Frame\-Mutex}!lsd_slam::KeyFrameGraph@{lsd\-\_\-slam\-::\-Key\-Frame\-Graph}}
+\subsubsection[{id\-To\-Key\-Frame\-Mutex}]{\setlength{\rightskip}{0pt plus 5cm}boost\-::shared\-\_\-mutex lsd\-\_\-slam\-::\-Key\-Frame\-Graph\-::id\-To\-Key\-Frame\-Mutex}}\label{classlsd__slam_1_1_key_frame_graph_aec658110a47437fdf2aa9c2fe2a074b4}
+Maps frame ids to keyframes. Contains A\-L\-L Keyframes allocated, including the one that currently being created. 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/home/king/rgbd-\/slam-\/lets-\/do-\/it/9-\/doxygen/lsd\-\_\-slam/lsd\-\_\-slam\-\_\-core/src/\-Global\-Mapping/Key\-Frame\-Graph.\-h\item 
+/home/king/rgbd-\/slam-\/lets-\/do-\/it/9-\/doxygen/lsd\-\_\-slam/lsd\-\_\-slam\-\_\-core/src/\-Global\-Mapping/Key\-Frame\-Graph.\-cpp\end{DoxyCompactItemize}

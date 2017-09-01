@@ -1,0 +1,76 @@
+\hypertarget{classlsd__slam_1_1_timestamp}{\section{lsd\-\_\-slam\-:\-:Timestamp Class Reference}
+\label{classlsd__slam_1_1_timestamp}\index{lsd\-\_\-slam\-::\-Timestamp@{lsd\-\_\-slam\-::\-Timestamp}}
+}
+
+
+{\ttfamily \#include $<$Timestamp.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classlsd__slam_1_1_timestamp_a8e3fcd5158f45d25f8eb89d7aa615f66}{Timestamp} ()
+\item 
+\hypertarget{classlsd__slam_1_1_timestamp_a6f4a6030dcdeda85ad3718569b00d4cb}{{\bfseries Timestamp} (double seconds)}\label{classlsd__slam_1_1_timestamp_a6f4a6030dcdeda85ad3718569b00d4cb}
+
+\item 
+double \hyperlink{classlsd__slam_1_1_timestamp_a7f3a5a2a40b213c59e3a4195e801ffe6}{to\-Sec} () const 
+\item 
+std\-::string \hyperlink{classlsd__slam_1_1_timestamp_aca4015dc0ef5190447b152ac1fc8f848}{to\-Date\-Str} (const char $\ast$format) const 
+\item 
+double \hyperlink{classlsd__slam_1_1_timestamp_a4caed49b69cb2a1a6f0634dc5a76c7e8}{seconds\-Until} (const \hyperlink{classlsd__slam_1_1_timestamp}{Timestamp} \&other) const 
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classlsd__slam_1_1_timestamp}{Timestamp} \hyperlink{classlsd__slam_1_1_timestamp_a2a6468867f6c98217a0bea2d064f142d}{now} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Represents a specific point in time. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classlsd__slam_1_1_timestamp_a8e3fcd5158f45d25f8eb89d7aa615f66}{\index{lsd\-\_\-slam\-::\-Timestamp@{lsd\-\_\-slam\-::\-Timestamp}!Timestamp@{Timestamp}}
+\index{Timestamp@{Timestamp}!lsd_slam::Timestamp@{lsd\-\_\-slam\-::\-Timestamp}}
+\subsubsection[{Timestamp}]{\setlength{\rightskip}{0pt plus 5cm}lsd\-\_\-slam\-::\-Timestamp\-::\-Timestamp (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classlsd__slam_1_1_timestamp_a8e3fcd5158f45d25f8eb89d7aa615f66}
+Creates an uninitialized timestamp. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classlsd__slam_1_1_timestamp_a2a6468867f6c98217a0bea2d064f142d}{\index{lsd\-\_\-slam\-::\-Timestamp@{lsd\-\_\-slam\-::\-Timestamp}!now@{now}}
+\index{now@{now}!lsd_slam::Timestamp@{lsd\-\_\-slam\-::\-Timestamp}}
+\subsubsection[{now}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Timestamp} lsd\-\_\-slam\-::\-Timestamp\-::now (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classlsd__slam_1_1_timestamp_a2a6468867f6c98217a0bea2d064f142d}
+Returns a timestamp representing the current point in time. \hypertarget{classlsd__slam_1_1_timestamp_a4caed49b69cb2a1a6f0634dc5a76c7e8}{\index{lsd\-\_\-slam\-::\-Timestamp@{lsd\-\_\-slam\-::\-Timestamp}!seconds\-Until@{seconds\-Until}}
+\index{seconds\-Until@{seconds\-Until}!lsd_slam::Timestamp@{lsd\-\_\-slam\-::\-Timestamp}}
+\subsubsection[{seconds\-Until}]{\setlength{\rightskip}{0pt plus 5cm}double lsd\-\_\-slam\-::\-Timestamp\-::seconds\-Until (
+\begin{DoxyParamCaption}
+\item[{const {\bf Timestamp} \&}]{other}
+\end{DoxyParamCaption}
+) const}}\label{classlsd__slam_1_1_timestamp_a4caed49b69cb2a1a6f0634dc5a76c7e8}
+Returns the seconds from this timestamp to the other. \hypertarget{classlsd__slam_1_1_timestamp_aca4015dc0ef5190447b152ac1fc8f848}{\index{lsd\-\_\-slam\-::\-Timestamp@{lsd\-\_\-slam\-::\-Timestamp}!to\-Date\-Str@{to\-Date\-Str}}
+\index{to\-Date\-Str@{to\-Date\-Str}!lsd_slam::Timestamp@{lsd\-\_\-slam\-::\-Timestamp}}
+\subsubsection[{to\-Date\-Str}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string lsd\-\_\-slam\-::\-Timestamp\-::to\-Date\-Str (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{format}
+\end{DoxyParamCaption}
+) const}}\label{classlsd__slam_1_1_timestamp_aca4015dc0ef5190447b152ac1fc8f848}
+Returns the timestamp as a date string with format T\-O\-D\-O. \hypertarget{classlsd__slam_1_1_timestamp_a7f3a5a2a40b213c59e3a4195e801ffe6}{\index{lsd\-\_\-slam\-::\-Timestamp@{lsd\-\_\-slam\-::\-Timestamp}!to\-Sec@{to\-Sec}}
+\index{to\-Sec@{to\-Sec}!lsd_slam::Timestamp@{lsd\-\_\-slam\-::\-Timestamp}}
+\subsubsection[{to\-Sec}]{\setlength{\rightskip}{0pt plus 5cm}double lsd\-\_\-slam\-::\-Timestamp\-::to\-Sec (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classlsd__slam_1_1_timestamp_a7f3a5a2a40b213c59e3a4195e801ffe6}
+Returns the timestamp as the time in seconds which has passed since the start of the program until the timestamp was taken. 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/home/king/rgbd-\/slam-\/lets-\/do-\/it/9-\/doxygen/lsd\-\_\-slam/lsd\-\_\-slam\-\_\-core/src/\-I\-O\-Wrapper/Timestamp.\-h\item 
+/home/king/rgbd-\/slam-\/lets-\/do-\/it/9-\/doxygen/lsd\-\_\-slam/lsd\-\_\-slam\-\_\-core/src/\-I\-O\-Wrapper/Timestamp.\-cpp\end{DoxyCompactItemize}

@@ -1,0 +1,69 @@
+\hypertarget{classlsd__slam_1_1_frame_memory}{\section{lsd\-\_\-slam\-:\-:Frame\-Memory Class Reference}
+\label{classlsd__slam_1_1_frame_memory}\index{lsd\-\_\-slam\-::\-Frame\-Memory@{lsd\-\_\-slam\-::\-Frame\-Memory}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+float $\ast$ \hyperlink{classlsd__slam_1_1_frame_memory_a5a2a621821958fe136a2ddc9707a1f72}{get\-Float\-Buffer} (unsigned int size)
+\item 
+void $\ast$ \hyperlink{classlsd__slam_1_1_frame_memory_abd3eb8d2623e977f3da91416d66d01e3}{get\-Buffer} (unsigned int size\-In\-Byte)
+\item 
+void \hyperlink{classlsd__slam_1_1_frame_memory_a04c59c5c8cfd2b65b4d7ce7b7d6ba493}{return\-Buffer} (void $\ast$buffer)
+\item 
+\hypertarget{classlsd__slam_1_1_frame_memory_a6835f2a14358dee3518d9f9bff8526e3}{boost\-::shared\-\_\-lock\\*
+$<$ boost\-::shared\-\_\-mutex $>$ {\bfseries activate\-Frame} (\hyperlink{classlsd__slam_1_1_frame}{Frame} $\ast$frame)}\label{classlsd__slam_1_1_frame_memory_a6835f2a14358dee3518d9f9bff8526e3}
+
+\item 
+\hypertarget{classlsd__slam_1_1_frame_memory_aa44bf3b85a471ccb4c4c7da53f395ec6}{void {\bfseries deactivate\-Frame} (\hyperlink{classlsd__slam_1_1_frame}{Frame} $\ast$frame)}\label{classlsd__slam_1_1_frame_memory_aa44bf3b85a471ccb4c4c7da53f395ec6}
+
+\item 
+\hypertarget{classlsd__slam_1_1_frame_memory_a39ebe0415eda3609bf80481b02fe7efc}{void {\bfseries prune\-Active\-Frames} ()}\label{classlsd__slam_1_1_frame_memory_a39ebe0415eda3609bf80481b02fe7efc}
+
+\item 
+\hypertarget{classlsd__slam_1_1_frame_memory_aec600d5495fb555f10b6d3383513d0c6}{void {\bfseries release\-Buffes} ()}\label{classlsd__slam_1_1_frame_memory_aec600d5495fb555f10b6d3383513d0c6}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \\*
+E\-I\-G\-E\-N\-\_\-\-M\-A\-K\-E\-\_\-\-A\-L\-I\-G\-N\-E\-D\-\_\-\-O\-P\-E\-R\-A\-T\-O\-R\-\_\-\-N\-E\-W \\*
+\hyperlink{classlsd__slam_1_1_frame_memory}{Frame\-Memory} \& \hyperlink{classlsd__slam_1_1_frame_memory_adf4afed8c58a420b38e4b117628ac32d}{get\-Instance} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classlsd__slam_1_1_frame_memory_abd3eb8d2623e977f3da91416d66d01e3}{\index{lsd\-\_\-slam\-::\-Frame\-Memory@{lsd\-\_\-slam\-::\-Frame\-Memory}!get\-Buffer@{get\-Buffer}}
+\index{get\-Buffer@{get\-Buffer}!lsd_slam::FrameMemory@{lsd\-\_\-slam\-::\-Frame\-Memory}}
+\subsubsection[{get\-Buffer}]{\setlength{\rightskip}{0pt plus 5cm}void $\ast$ lsd\-\_\-slam\-::\-Frame\-Memory\-::get\-Buffer (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{size\-In\-Byte}
+\end{DoxyParamCaption}
+)}}\label{classlsd__slam_1_1_frame_memory_abd3eb8d2623e977f3da91416d66d01e3}
+Allocates or fetches a buffer with length\-: size $\ast$ sizeof(float). Corresponds to \char`\"{}buffer = new float\mbox{[}size\mbox{]}\char`\"{}. \hypertarget{classlsd__slam_1_1_frame_memory_a5a2a621821958fe136a2ddc9707a1f72}{\index{lsd\-\_\-slam\-::\-Frame\-Memory@{lsd\-\_\-slam\-::\-Frame\-Memory}!get\-Float\-Buffer@{get\-Float\-Buffer}}
+\index{get\-Float\-Buffer@{get\-Float\-Buffer}!lsd_slam::FrameMemory@{lsd\-\_\-slam\-::\-Frame\-Memory}}
+\subsubsection[{get\-Float\-Buffer}]{\setlength{\rightskip}{0pt plus 5cm}float $\ast$ lsd\-\_\-slam\-::\-Frame\-Memory\-::get\-Float\-Buffer (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{size}
+\end{DoxyParamCaption}
+)}}\label{classlsd__slam_1_1_frame_memory_a5a2a621821958fe136a2ddc9707a1f72}
+Allocates or fetches a buffer with length\-: size $\ast$ sizeof(float). Corresponds to \char`\"{}buffer = new float\mbox{[}size\mbox{]}\char`\"{}. \hypertarget{classlsd__slam_1_1_frame_memory_adf4afed8c58a420b38e4b117628ac32d}{\index{lsd\-\_\-slam\-::\-Frame\-Memory@{lsd\-\_\-slam\-::\-Frame\-Memory}!get\-Instance@{get\-Instance}}
+\index{get\-Instance@{get\-Instance}!lsd_slam::FrameMemory@{lsd\-\_\-slam\-::\-Frame\-Memory}}
+\subsubsection[{get\-Instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Frame\-Memory} \& lsd\-\_\-slam\-::\-Frame\-Memory\-::get\-Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classlsd__slam_1_1_frame_memory_adf4afed8c58a420b38e4b117628ac32d}
+Returns the global instance. Creates it when the method is first called. \hypertarget{classlsd__slam_1_1_frame_memory_a04c59c5c8cfd2b65b4d7ce7b7d6ba493}{\index{lsd\-\_\-slam\-::\-Frame\-Memory@{lsd\-\_\-slam\-::\-Frame\-Memory}!return\-Buffer@{return\-Buffer}}
+\index{return\-Buffer@{return\-Buffer}!lsd_slam::FrameMemory@{lsd\-\_\-slam\-::\-Frame\-Memory}}
+\subsubsection[{return\-Buffer}]{\setlength{\rightskip}{0pt plus 5cm}void lsd\-\_\-slam\-::\-Frame\-Memory\-::return\-Buffer (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{buffer}
+\end{DoxyParamCaption}
+)}}\label{classlsd__slam_1_1_frame_memory_a04c59c5c8cfd2b65b4d7ce7b7d6ba493}
+Returns an allocated buffer back to the global storage for re-\/use. Corresponds to \char`\"{}delete\mbox{[}$\,$\mbox{]} buffer\char`\"{}. 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/home/king/rgbd-\/slam-\/lets-\/do-\/it/9-\/doxygen/lsd\-\_\-slam/lsd\-\_\-slam\-\_\-core/src/\-Data\-Structures/Frame\-Memory.\-h\item 
+/home/king/rgbd-\/slam-\/lets-\/do-\/it/9-\/doxygen/lsd\-\_\-slam/lsd\-\_\-slam\-\_\-core/src/\-Data\-Structures/Frame\-Memory.\-cpp\end{DoxyCompactItemize}

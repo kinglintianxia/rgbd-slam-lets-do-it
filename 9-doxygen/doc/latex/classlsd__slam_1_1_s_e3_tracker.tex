@@ -1,0 +1,114 @@
+\hypertarget{classlsd__slam_1_1_s_e3_tracker}{\section{lsd\-\_\-slam\-:\-:S\-E3\-Tracker Class Reference}
+\label{classlsd__slam_1_1_s_e3_tracker}\index{lsd\-\_\-slam\-::\-S\-E3\-Tracker@{lsd\-\_\-slam\-::\-S\-E3\-Tracker}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classlsd__slam_1_1_s_e3_tracker_a7dfbca57408f4dfe6491b096ba2f072c}{{\bfseries S\-E3\-Tracker} (int w, int h, Eigen\-::\-Matrix3f K)}\label{classlsd__slam_1_1_s_e3_tracker_a7dfbca57408f4dfe6491b096ba2f072c}
+
+\item 
+\hypertarget{classlsd__slam_1_1_s_e3_tracker_a055b8a30a6ee118e2b9db62bf49b2970}{{\bfseries S\-E3\-Tracker} (const \hyperlink{classlsd__slam_1_1_s_e3_tracker}{S\-E3\-Tracker} \&)=delete}\label{classlsd__slam_1_1_s_e3_tracker_a055b8a30a6ee118e2b9db62bf49b2970}
+
+\item 
+\hypertarget{classlsd__slam_1_1_s_e3_tracker_a032debfb5622d767383c4821442bae5e}{\hyperlink{classlsd__slam_1_1_s_e3_tracker}{S\-E3\-Tracker} \& {\bfseries operator=} (const \hyperlink{classlsd__slam_1_1_s_e3_tracker}{S\-E3\-Tracker} \&)=delete}\label{classlsd__slam_1_1_s_e3_tracker_a032debfb5622d767383c4821442bae5e}
+
+\item 
+\hypertarget{classlsd__slam_1_1_s_e3_tracker_ad9192d9c768a9920f2c0374ea66f1ee2}{S\-E3 {\bfseries track\-Frame} (\hyperlink{classlsd__slam_1_1_tracking_reference}{Tracking\-Reference} $\ast$reference, \hyperlink{classlsd__slam_1_1_frame}{Frame} $\ast$frame, const S\-E3 \&frame\-To\-Reference\-\_\-initial\-Estimate)}\label{classlsd__slam_1_1_s_e3_tracker_ad9192d9c768a9920f2c0374ea66f1ee2}
+
+\item 
+\hypertarget{classlsd__slam_1_1_s_e3_tracker_a01873383b027fb673d8bada325412d8e}{S\-E3 {\bfseries track\-Frame\-On\-Permaref} (\hyperlink{classlsd__slam_1_1_frame}{Frame} $\ast$reference, \hyperlink{classlsd__slam_1_1_frame}{Frame} $\ast$frame, S\-E3 reference\-To\-Frame)}\label{classlsd__slam_1_1_s_e3_tracker_a01873383b027fb673d8bada325412d8e}
+
+\item 
+\hypertarget{classlsd__slam_1_1_s_e3_tracker_a96ab1ad07442965473c742347e5df564}{float {\bfseries check\-Perma\-Ref\-Overlap} (\hyperlink{classlsd__slam_1_1_frame}{Frame} $\ast$reference, S\-E3 reference\-To\-Frame)}\label{classlsd__slam_1_1_s_e3_tracker_a96ab1ad07442965473c742347e5df564}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classlsd__slam_1_1_s_e3_tracker_a1b49a9387602c5bc255c6536651b37b5}{E\-I\-G\-E\-N\-\_\-\-M\-A\-K\-E\-\_\-\-A\-L\-I\-G\-N\-E\-D\-\_\-\-O\-P\-E\-R\-A\-T\-O\-R\-\_\-\-N\-E\-W int {\bfseries width}}\label{classlsd__slam_1_1_s_e3_tracker_a1b49a9387602c5bc255c6536651b37b5}
+
+\item 
+\hypertarget{classlsd__slam_1_1_s_e3_tracker_a4112b73babf2a7c917c530b0950129ce}{E\-I\-G\-E\-N\-\_\-\-M\-A\-K\-E\-\_\-\-A\-L\-I\-G\-N\-E\-D\-\_\-\-O\-P\-E\-R\-A\-T\-O\-R\-\_\-\-N\-E\-W int {\bfseries height}}\label{classlsd__slam_1_1_s_e3_tracker_a4112b73babf2a7c917c530b0950129ce}
+
+\item 
+\hypertarget{classlsd__slam_1_1_s_e3_tracker_aac394896bdb19a1b9f65765374f50466}{Eigen\-::\-Matrix3f {\bfseries K}}\label{classlsd__slam_1_1_s_e3_tracker_aac394896bdb19a1b9f65765374f50466}
+
+\item 
+\hypertarget{classlsd__slam_1_1_s_e3_tracker_a1b0051e57e846cc114da524928f2bc57}{Eigen\-::\-Matrix3f {\bfseries K\-Inv}}\label{classlsd__slam_1_1_s_e3_tracker_a1b0051e57e846cc114da524928f2bc57}
+
+\item 
+\hypertarget{classlsd__slam_1_1_s_e3_tracker_a2264c4f7199d450b8ce44c4349740de2}{float {\bfseries fx}}\label{classlsd__slam_1_1_s_e3_tracker_a2264c4f7199d450b8ce44c4349740de2}
+
+\item 
+\hypertarget{classlsd__slam_1_1_s_e3_tracker_a0eb3aaf98656d286869ed6b7917df43a}{float {\bfseries fy}}\label{classlsd__slam_1_1_s_e3_tracker_a0eb3aaf98656d286869ed6b7917df43a}
+
+\item 
+\hypertarget{classlsd__slam_1_1_s_e3_tracker_ac7e6d6ce010df3cded56eb85aa655fe2}{float {\bfseries cx}}\label{classlsd__slam_1_1_s_e3_tracker_ac7e6d6ce010df3cded56eb85aa655fe2}
+
+\item 
+\hypertarget{classlsd__slam_1_1_s_e3_tracker_ab4d871dd945c23c4f185c33041a2975b}{float {\bfseries cy}}\label{classlsd__slam_1_1_s_e3_tracker_ab4d871dd945c23c4f185c33041a2975b}
+
+\item 
+\hypertarget{classlsd__slam_1_1_s_e3_tracker_abf8a595ebd5bc6b274334d3c7444f3a8}{float {\bfseries fxi}}\label{classlsd__slam_1_1_s_e3_tracker_abf8a595ebd5bc6b274334d3c7444f3a8}
+
+\item 
+\hypertarget{classlsd__slam_1_1_s_e3_tracker_a737be6660f2b79dea17eb4d8c9a677c7}{float {\bfseries fyi}}\label{classlsd__slam_1_1_s_e3_tracker_a737be6660f2b79dea17eb4d8c9a677c7}
+
+\item 
+\hypertarget{classlsd__slam_1_1_s_e3_tracker_a55807a9dbdff5924b550e8b0835bcee7}{float {\bfseries cxi}}\label{classlsd__slam_1_1_s_e3_tracker_a55807a9dbdff5924b550e8b0835bcee7}
+
+\item 
+\hypertarget{classlsd__slam_1_1_s_e3_tracker_add9e44a0988a549b5a9b8e1595341f24}{float {\bfseries cyi}}\label{classlsd__slam_1_1_s_e3_tracker_add9e44a0988a549b5a9b8e1595341f24}
+
+\item 
+\hypertarget{classlsd__slam_1_1_s_e3_tracker_a75c250c1e3ce513b6c509e68ec7f7ddc}{\hyperlink{classlsd__slam_1_1_dense_depth_tracker_settings}{Dense\-Depth\-Tracker\-Settings} {\bfseries settings}}\label{classlsd__slam_1_1_s_e3_tracker_a75c250c1e3ce513b6c509e68ec7f7ddc}
+
+\item 
+\hypertarget{classlsd__slam_1_1_s_e3_tracker_a107ff5d6d1b605944562c749f552dc40}{cv\-::\-Mat {\bfseries debug\-Image\-Residuals}}\label{classlsd__slam_1_1_s_e3_tracker_a107ff5d6d1b605944562c749f552dc40}
+
+\item 
+\hypertarget{classlsd__slam_1_1_s_e3_tracker_a6297e7ed2b59b1beef455b98c06088fc}{cv\-::\-Mat {\bfseries debug\-Image\-Weights}}\label{classlsd__slam_1_1_s_e3_tracker_a6297e7ed2b59b1beef455b98c06088fc}
+
+\item 
+\hypertarget{classlsd__slam_1_1_s_e3_tracker_a217fd165cbda8828fce77b5a0fb1f18a}{cv\-::\-Mat {\bfseries debug\-Image\-Second\-Frame}}\label{classlsd__slam_1_1_s_e3_tracker_a217fd165cbda8828fce77b5a0fb1f18a}
+
+\item 
+\hypertarget{classlsd__slam_1_1_s_e3_tracker_a60b1e358bb4adf482492ffb6ade9aefb}{cv\-::\-Mat {\bfseries debug\-Image\-Old\-Image\-Source}}\label{classlsd__slam_1_1_s_e3_tracker_a60b1e358bb4adf482492ffb6ade9aefb}
+
+\item 
+\hypertarget{classlsd__slam_1_1_s_e3_tracker_acac420b12c1244b0905f6dbfce920269}{cv\-::\-Mat {\bfseries debug\-Image\-Old\-Image\-Warped}}\label{classlsd__slam_1_1_s_e3_tracker_acac420b12c1244b0905f6dbfce920269}
+
+\item 
+\hypertarget{classlsd__slam_1_1_s_e3_tracker_abafd83f1a3ebd3cde778214f8eefa88a}{float {\bfseries point\-Usage}}\label{classlsd__slam_1_1_s_e3_tracker_abafd83f1a3ebd3cde778214f8eefa88a}
+
+\item 
+\hypertarget{classlsd__slam_1_1_s_e3_tracker_aa5c3cad4c11940fc4f133bf9e20eae88}{float {\bfseries last\-Good\-Count}}\label{classlsd__slam_1_1_s_e3_tracker_aa5c3cad4c11940fc4f133bf9e20eae88}
+
+\item 
+\hypertarget{classlsd__slam_1_1_s_e3_tracker_ab5a14f1b49095ebed44766f1e3528c61}{float {\bfseries last\-Mean\-Res}}\label{classlsd__slam_1_1_s_e3_tracker_ab5a14f1b49095ebed44766f1e3528c61}
+
+\item 
+\hypertarget{classlsd__slam_1_1_s_e3_tracker_a95114010e6904ac3f266337a29c1a677}{float {\bfseries last\-Bad\-Count}}\label{classlsd__slam_1_1_s_e3_tracker_a95114010e6904ac3f266337a29c1a677}
+
+\item 
+\hypertarget{classlsd__slam_1_1_s_e3_tracker_a148057b7b4dfc84dfa504efea88e8ab8}{float {\bfseries last\-Residual}}\label{classlsd__slam_1_1_s_e3_tracker_a148057b7b4dfc84dfa504efea88e8ab8}
+
+\item 
+\hypertarget{classlsd__slam_1_1_s_e3_tracker_a1d10c055524af7dac1f27b5e9946b92d}{float {\bfseries affine\-Estimation\-\_\-a}}\label{classlsd__slam_1_1_s_e3_tracker_a1d10c055524af7dac1f27b5e9946b92d}
+
+\item 
+\hypertarget{classlsd__slam_1_1_s_e3_tracker_afbb4c99a14daf56a6c92c9d61064631e}{float {\bfseries affine\-Estimation\-\_\-b}}\label{classlsd__slam_1_1_s_e3_tracker_afbb4c99a14daf56a6c92c9d61064631e}
+
+\item 
+\hypertarget{classlsd__slam_1_1_s_e3_tracker_a3da2769c104862efa882b0b04026dbc9}{bool {\bfseries diverged}}\label{classlsd__slam_1_1_s_e3_tracker_a3da2769c104862efa882b0b04026dbc9}
+
+\item 
+\hypertarget{classlsd__slam_1_1_s_e3_tracker_a6bb2c2fd5415b9487c5ece3d34abd7c8}{bool {\bfseries tracking\-Was\-Good}}\label{classlsd__slam_1_1_s_e3_tracker_a6bb2c2fd5415b9487c5ece3d34abd7c8}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/home/king/rgbd-\/slam-\/lets-\/do-\/it/9-\/doxygen/lsd\-\_\-slam/lsd\-\_\-slam\-\_\-core/src/\-Tracking/S\-E3\-Tracker.\-h\item 
+/home/king/rgbd-\/slam-\/lets-\/do-\/it/9-\/doxygen/lsd\-\_\-slam/lsd\-\_\-slam\-\_\-core/src/\-Tracking/S\-E3\-Tracker.\-cpp\end{DoxyCompactItemize}

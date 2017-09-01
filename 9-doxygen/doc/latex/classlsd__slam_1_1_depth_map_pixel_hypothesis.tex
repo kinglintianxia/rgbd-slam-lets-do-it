@@ -1,0 +1,72 @@
+\hypertarget{classlsd__slam_1_1_depth_map_pixel_hypothesis}{\section{lsd\-\_\-slam\-:\-:Depth\-Map\-Pixel\-Hypothesis Class Reference}
+\label{classlsd__slam_1_1_depth_map_pixel_hypothesis}\index{lsd\-\_\-slam\-::\-Depth\-Map\-Pixel\-Hypothesis@{lsd\-\_\-slam\-::\-Depth\-Map\-Pixel\-Hypothesis}}
+}
+
+
+{\ttfamily \#include $<$Depth\-Map\-Pixel\-Hypothesis.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classlsd__slam_1_1_depth_map_pixel_hypothesis_ab44f3294848f98ba98230e7a32df3966}{{\bfseries Depth\-Map\-Pixel\-Hypothesis} (const float \&my\-\_\-idepth, const float \&my\-\_\-idepth\-\_\-smoothed, const float \&my\-\_\-idepth\-\_\-var, const float \&my\-\_\-idepth\-\_\-var\-\_\-smoothed, const int \&my\-\_\-validity\-\_\-counter)}\label{classlsd__slam_1_1_depth_map_pixel_hypothesis_ab44f3294848f98ba98230e7a32df3966}
+
+\item 
+\hypertarget{classlsd__slam_1_1_depth_map_pixel_hypothesis_a5e6aa51c8e45df411b28b639bdb5e522}{{\bfseries Depth\-Map\-Pixel\-Hypothesis} (const float \&my\-\_\-idepth, const float \&my\-\_\-idepth\-\_\-var, const int \&my\-\_\-validity\-\_\-counter)}\label{classlsd__slam_1_1_depth_map_pixel_hypothesis_a5e6aa51c8e45df411b28b639bdb5e522}
+
+\item 
+\hypertarget{classlsd__slam_1_1_depth_map_pixel_hypothesis_ad59c8017a906e51e3ab3b104b68da64b}{cv\-::\-Vec3b {\bfseries get\-Visualization\-Color} (int last\-Frame\-I\-D) const }\label{classlsd__slam_1_1_depth_map_pixel_hypothesis_ad59c8017a906e51e3ab3b104b68da64b}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classlsd__slam_1_1_depth_map_pixel_hypothesis_aba28a1bf8203d9e0e323b9015d4ac425}{is\-Valid}
+\item 
+int \hyperlink{classlsd__slam_1_1_depth_map_pixel_hypothesis_a27273a9266af3c4fb91147febeae020a}{blacklisted}
+\item 
+float \hyperlink{classlsd__slam_1_1_depth_map_pixel_hypothesis_a6de9a990e0a4cbbd2ce810503996f76c}{next\-Stereo\-Frame\-Min\-I\-D}
+\item 
+int \hyperlink{classlsd__slam_1_1_depth_map_pixel_hypothesis_a56802b2f4413dd295383d142a3499808}{validity\-\_\-counter}
+\item 
+float \hyperlink{classlsd__slam_1_1_depth_map_pixel_hypothesis_abfc19276c22e1c4fae82f61054a4579f}{idepth}
+\item 
+\hypertarget{classlsd__slam_1_1_depth_map_pixel_hypothesis_a0a5d3b88ab84669231e215aaf2b98c94}{float {\bfseries idepth\-\_\-var}}\label{classlsd__slam_1_1_depth_map_pixel_hypothesis_a0a5d3b88ab84669231e215aaf2b98c94}
+
+\item 
+float \hyperlink{classlsd__slam_1_1_depth_map_pixel_hypothesis_a82ac6c0b56d05a755373fdf23a9cacb2}{idepth\-\_\-smoothed}
+\item 
+\hypertarget{classlsd__slam_1_1_depth_map_pixel_hypothesis_a336aa95d15dafb1af2af2e02671340c0}{float {\bfseries idepth\-\_\-var\-\_\-smoothed}}\label{classlsd__slam_1_1_depth_map_pixel_hypothesis_a336aa95d15dafb1af2af2e02671340c0}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Depth hypothesis used in \hyperlink{classlsd__slam_1_1_depth_map}{Depth\-Map}.
+
+Inverse depths need to be scaled with the \hyperlink{classlsd__slam_1_1_depth_map}{Depth\-Map}'s internal\-Scale\-Factor to get frame scale. (From that, scale with the current keyframe's scale to get the current best estimate of absolute scale). 
+
+\subsection{Member Data Documentation}
+\hypertarget{classlsd__slam_1_1_depth_map_pixel_hypothesis_a27273a9266af3c4fb91147febeae020a}{\index{lsd\-\_\-slam\-::\-Depth\-Map\-Pixel\-Hypothesis@{lsd\-\_\-slam\-::\-Depth\-Map\-Pixel\-Hypothesis}!blacklisted@{blacklisted}}
+\index{blacklisted@{blacklisted}!lsd_slam::DepthMapPixelHypothesis@{lsd\-\_\-slam\-::\-Depth\-Map\-Pixel\-Hypothesis}}
+\subsubsection[{blacklisted}]{\setlength{\rightskip}{0pt plus 5cm}int lsd\-\_\-slam\-::\-Depth\-Map\-Pixel\-Hypothesis\-::blacklisted}}\label{classlsd__slam_1_1_depth_map_pixel_hypothesis_a27273a9266af3c4fb91147febeae020a}
+Flag that blacklists a point to never be used -\/ set if stereo fails repeatedly on this pixel. \hypertarget{classlsd__slam_1_1_depth_map_pixel_hypothesis_abfc19276c22e1c4fae82f61054a4579f}{\index{lsd\-\_\-slam\-::\-Depth\-Map\-Pixel\-Hypothesis@{lsd\-\_\-slam\-::\-Depth\-Map\-Pixel\-Hypothesis}!idepth@{idepth}}
+\index{idepth@{idepth}!lsd_slam::DepthMapPixelHypothesis@{lsd\-\_\-slam\-::\-Depth\-Map\-Pixel\-Hypothesis}}
+\subsubsection[{idepth}]{\setlength{\rightskip}{0pt plus 5cm}float lsd\-\_\-slam\-::\-Depth\-Map\-Pixel\-Hypothesis\-::idepth}}\label{classlsd__slam_1_1_depth_map_pixel_hypothesis_abfc19276c22e1c4fae82f61054a4579f}
+Actual Gaussian Distribution. \hypertarget{classlsd__slam_1_1_depth_map_pixel_hypothesis_a82ac6c0b56d05a755373fdf23a9cacb2}{\index{lsd\-\_\-slam\-::\-Depth\-Map\-Pixel\-Hypothesis@{lsd\-\_\-slam\-::\-Depth\-Map\-Pixel\-Hypothesis}!idepth\-\_\-smoothed@{idepth\-\_\-smoothed}}
+\index{idepth\-\_\-smoothed@{idepth\-\_\-smoothed}!lsd_slam::DepthMapPixelHypothesis@{lsd\-\_\-slam\-::\-Depth\-Map\-Pixel\-Hypothesis}}
+\subsubsection[{idepth\-\_\-smoothed}]{\setlength{\rightskip}{0pt plus 5cm}float lsd\-\_\-slam\-::\-Depth\-Map\-Pixel\-Hypothesis\-::idepth\-\_\-smoothed}}\label{classlsd__slam_1_1_depth_map_pixel_hypothesis_a82ac6c0b56d05a755373fdf23a9cacb2}
+Smoothed Gaussian Distribution. \hypertarget{classlsd__slam_1_1_depth_map_pixel_hypothesis_aba28a1bf8203d9e0e323b9015d4ac425}{\index{lsd\-\_\-slam\-::\-Depth\-Map\-Pixel\-Hypothesis@{lsd\-\_\-slam\-::\-Depth\-Map\-Pixel\-Hypothesis}!is\-Valid@{is\-Valid}}
+\index{is\-Valid@{is\-Valid}!lsd_slam::DepthMapPixelHypothesis@{lsd\-\_\-slam\-::\-Depth\-Map\-Pixel\-Hypothesis}}
+\subsubsection[{is\-Valid}]{\setlength{\rightskip}{0pt plus 5cm}bool lsd\-\_\-slam\-::\-Depth\-Map\-Pixel\-Hypothesis\-::is\-Valid}}\label{classlsd__slam_1_1_depth_map_pixel_hypothesis_aba28a1bf8203d9e0e323b9015d4ac425}
+Flag telling if there is a valid estimate at this point. All other values are only valid if this is set to true. \hypertarget{classlsd__slam_1_1_depth_map_pixel_hypothesis_a6de9a990e0a4cbbd2ce810503996f76c}{\index{lsd\-\_\-slam\-::\-Depth\-Map\-Pixel\-Hypothesis@{lsd\-\_\-slam\-::\-Depth\-Map\-Pixel\-Hypothesis}!next\-Stereo\-Frame\-Min\-I\-D@{next\-Stereo\-Frame\-Min\-I\-D}}
+\index{next\-Stereo\-Frame\-Min\-I\-D@{next\-Stereo\-Frame\-Min\-I\-D}!lsd_slam::DepthMapPixelHypothesis@{lsd\-\_\-slam\-::\-Depth\-Map\-Pixel\-Hypothesis}}
+\subsubsection[{next\-Stereo\-Frame\-Min\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}float lsd\-\_\-slam\-::\-Depth\-Map\-Pixel\-Hypothesis\-::next\-Stereo\-Frame\-Min\-I\-D}}\label{classlsd__slam_1_1_depth_map_pixel_hypothesis_a6de9a990e0a4cbbd2ce810503996f76c}
+How many frames to skip ahead in the tracked-\/frames-\/queue. \hypertarget{classlsd__slam_1_1_depth_map_pixel_hypothesis_a56802b2f4413dd295383d142a3499808}{\index{lsd\-\_\-slam\-::\-Depth\-Map\-Pixel\-Hypothesis@{lsd\-\_\-slam\-::\-Depth\-Map\-Pixel\-Hypothesis}!validity\-\_\-counter@{validity\-\_\-counter}}
+\index{validity\-\_\-counter@{validity\-\_\-counter}!lsd_slam::DepthMapPixelHypothesis@{lsd\-\_\-slam\-::\-Depth\-Map\-Pixel\-Hypothesis}}
+\subsubsection[{validity\-\_\-counter}]{\setlength{\rightskip}{0pt plus 5cm}int lsd\-\_\-slam\-::\-Depth\-Map\-Pixel\-Hypothesis\-::validity\-\_\-counter}}\label{classlsd__slam_1_1_depth_map_pixel_hypothesis_a56802b2f4413dd295383d142a3499808}
+Counter for validity, basically how many successful observations are incorporated. 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/home/king/rgbd-\/slam-\/lets-\/do-\/it/9-\/doxygen/lsd\-\_\-slam/lsd\-\_\-slam\-\_\-core/src/\-Depth\-Estimation/Depth\-Map\-Pixel\-Hypothesis.\-h\item 
+/home/king/rgbd-\/slam-\/lets-\/do-\/it/9-\/doxygen/lsd\-\_\-slam/lsd\-\_\-slam\-\_\-core/src/\-Depth\-Estimation/Depth\-Map\-Pixel\-Hypothesis.\-cpp\end{DoxyCompactItemize}

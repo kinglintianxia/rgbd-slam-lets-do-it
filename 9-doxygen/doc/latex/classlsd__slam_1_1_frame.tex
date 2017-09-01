@@ -1,0 +1,383 @@
+\hypertarget{classlsd__slam_1_1_frame}{\section{lsd\-\_\-slam\-:\-:Frame Class Reference}
+\label{classlsd__slam_1_1_frame}\index{lsd\-\_\-slam\-::\-Frame@{lsd\-\_\-slam\-::\-Frame}}
+}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classlsd__slam_1_1_frame_a91c2bcdbabb5db67344b5379588e6990}{Data\-Flags} \{ \\*
+{\bfseries I\-M\-A\-G\-E} = 1$<$$<$0, 
+{\bfseries G\-R\-A\-D\-I\-E\-N\-T\-S} = 1$<$$<$1, 
+{\bfseries M\-A\-X\-\_\-\-G\-R\-A\-D\-I\-E\-N\-T\-S} = 1$<$$<$2, 
+{\bfseries I\-D\-E\-P\-T\-H} = 1$<$$<$3, 
+\\*
+{\bfseries I\-D\-E\-P\-T\-H\-\_\-\-V\-A\-R} = 1$<$$<$4, 
+{\bfseries R\-E\-F\-\_\-\-I\-D} = 1$<$$<$5, 
+{\bfseries A\-L\-L} = I\-M\-A\-G\-E $\vert$ G\-R\-A\-D\-I\-E\-N\-T\-S $\vert$ M\-A\-X\-\_\-\-G\-R\-A\-D\-I\-E\-N\-T\-S $\vert$ I\-D\-E\-P\-T\-H $\vert$ I\-D\-E\-P\-T\-H\-\_\-\-V\-A\-R $\vert$ R\-E\-F\-\_\-\-I\-D
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classlsd__slam_1_1_frame_afe0e4c4a37577da20ae9ddd5a854f29d}{{\bfseries Frame} (int \hyperlink{classlsd__slam_1_1_frame_a6d38d40cd9a68d253bcb3cab2ddfa068}{id}, int \hyperlink{classlsd__slam_1_1_frame_a3f14a1c43b6cb21d31274f880b0bf36b}{width}, int \hyperlink{classlsd__slam_1_1_frame_a014d19bf6ffba0f0c0b8b684f9afb0b0}{height}, const Eigen\-::\-Matrix3f \&\hyperlink{classlsd__slam_1_1_frame_adeb235dc3e4a4d8fcf622b5771299c31}{K}, double \hyperlink{classlsd__slam_1_1_frame_a7124f3e1da6e9db387a3f89706225b47}{timestamp}, const unsigned char $\ast$image)}\label{classlsd__slam_1_1_frame_afe0e4c4a37577da20ae9ddd5a854f29d}
+
+\item 
+\hypertarget{classlsd__slam_1_1_frame_aeefefa841f84ffa5a2a9a31c5eefe9c0}{{\bfseries Frame} (int \hyperlink{classlsd__slam_1_1_frame_a6d38d40cd9a68d253bcb3cab2ddfa068}{id}, int \hyperlink{classlsd__slam_1_1_frame_a3f14a1c43b6cb21d31274f880b0bf36b}{width}, int \hyperlink{classlsd__slam_1_1_frame_a014d19bf6ffba0f0c0b8b684f9afb0b0}{height}, const Eigen\-::\-Matrix3f \&\hyperlink{classlsd__slam_1_1_frame_adeb235dc3e4a4d8fcf622b5771299c31}{K}, double \hyperlink{classlsd__slam_1_1_frame_a7124f3e1da6e9db387a3f89706225b47}{timestamp}, const float $\ast$image)}\label{classlsd__slam_1_1_frame_aeefefa841f84ffa5a2a9a31c5eefe9c0}
+
+\item 
+void \hyperlink{classlsd__slam_1_1_frame_aa869fc645781090678dc61399ef26f73}{set\-Depth} (const \hyperlink{classlsd__slam_1_1_depth_map_pixel_hypothesis}{Depth\-Map\-Pixel\-Hypothesis} $\ast$new\-Depth)
+\item 
+void \hyperlink{classlsd__slam_1_1_frame_a4ff87802d5bcafda551ffb2506f7192e}{calculate\-Mean\-Information} ()
+\item 
+void \hyperlink{classlsd__slam_1_1_frame_a7e563deb5eadcaddc85d7618bb021b1b}{set\-Depth\-From\-Ground\-Truth} (const float $\ast$depth, float cov\-\_\-scale=1.\-0f)
+\item 
+void \hyperlink{classlsd__slam_1_1_frame_a377c85038536721d99473f810cb45241}{prepare\-For\-Stereo\-With} (\hyperlink{classlsd__slam_1_1_frame}{Frame} $\ast$other, Sim3 this\-To\-Other, const Eigen\-::\-Matrix3f \&\hyperlink{classlsd__slam_1_1_frame_adeb235dc3e4a4d8fcf622b5771299c31}{K}, const int level)
+\item 
+int \hyperlink{classlsd__slam_1_1_frame_a6d38d40cd9a68d253bcb3cab2ddfa068}{id} () const 
+\item 
+int \hyperlink{classlsd__slam_1_1_frame_a3f14a1c43b6cb21d31274f880b0bf36b}{width} (int level=0) const 
+\item 
+int \hyperlink{classlsd__slam_1_1_frame_a014d19bf6ffba0f0c0b8b684f9afb0b0}{height} (int level=0) const 
+\item 
+const Eigen\-::\-Matrix3f \& \hyperlink{classlsd__slam_1_1_frame_adeb235dc3e4a4d8fcf622b5771299c31}{K} (int level=0) const 
+\item 
+const Eigen\-::\-Matrix3f \& \hyperlink{classlsd__slam_1_1_frame_af32c050a1ada7d6c22aa8df04fd94085}{K\-Inv} (int level=0) const 
+\item 
+float \hyperlink{classlsd__slam_1_1_frame_aaa552f594a3e712b981762719d652359}{fx} (int level=0) const 
+\item 
+float \hyperlink{classlsd__slam_1_1_frame_af8a9e82339d7f20a380a47d27cdeb01e}{fy} (int level=0) const 
+\item 
+float \hyperlink{classlsd__slam_1_1_frame_a8d46588a32aa5feb71f771f267dc432d}{cx} (int level=0) const 
+\item 
+float \hyperlink{classlsd__slam_1_1_frame_a2732f1bad0442085b11f3552a2fd0525}{cy} (int level=0) const 
+\item 
+float \hyperlink{classlsd__slam_1_1_frame_a9d98889a6a367e862f28b4a035604f46}{fx\-Inv} (int level=0) const 
+\item 
+float \hyperlink{classlsd__slam_1_1_frame_ab5c98941622d0f0470381a8ed2f833c1}{fy\-Inv} (int level=0) const 
+\item 
+float \hyperlink{classlsd__slam_1_1_frame_a4690556800b10f98c18a2fada62ae62b}{cx\-Inv} (int level=0) const 
+\item 
+float \hyperlink{classlsd__slam_1_1_frame_aae9fa687e7e515ba009a5fe5a617bf75}{cy\-Inv} (int level=0) const 
+\item 
+double \hyperlink{classlsd__slam_1_1_frame_a7124f3e1da6e9db387a3f89706225b47}{timestamp} () const 
+\item 
+\hypertarget{classlsd__slam_1_1_frame_a9306307027bbe62b973c0b138216b456}{float $\ast$ {\bfseries image} (int level=0)}\label{classlsd__slam_1_1_frame_a9306307027bbe62b973c0b138216b456}
+
+\item 
+\hypertarget{classlsd__slam_1_1_frame_a2c31baa0cea975fb73ccf80d92f7a5de}{const Eigen\-::\-Vector4f $\ast$ {\bfseries gradients} (int level=0)}\label{classlsd__slam_1_1_frame_a2c31baa0cea975fb73ccf80d92f7a5de}
+
+\item 
+\hypertarget{classlsd__slam_1_1_frame_a0b26845d846249e909e6ab0adc022ebf}{const float $\ast$ {\bfseries max\-Gradients} (int level=0)}\label{classlsd__slam_1_1_frame_a0b26845d846249e909e6ab0adc022ebf}
+
+\item 
+\hypertarget{classlsd__slam_1_1_frame_abe0ec6e93823ae0a31e73100a8b73940}{bool {\bfseries has\-I\-Depth\-Been\-Set} () const }\label{classlsd__slam_1_1_frame_abe0ec6e93823ae0a31e73100a8b73940}
+
+\item 
+\hypertarget{classlsd__slam_1_1_frame_ad78d873de1adfd4ab3268c50b1d462c7}{const float $\ast$ {\bfseries idepth} (int level=0)}\label{classlsd__slam_1_1_frame_ad78d873de1adfd4ab3268c50b1d462c7}
+
+\item 
+\hypertarget{classlsd__slam_1_1_frame_aa3fb7f275b5da621c039a6746b905770}{const float $\ast$ {\bfseries idepth\-Var} (int level=0)}\label{classlsd__slam_1_1_frame_aa3fb7f275b5da621c039a6746b905770}
+
+\item 
+\hypertarget{classlsd__slam_1_1_frame_a51cfb8cc35140eee3283021d97496db6}{const unsigned char $\ast$ {\bfseries validity\-\_\-re\-Act} ()}\label{classlsd__slam_1_1_frame_a51cfb8cc35140eee3283021d97496db6}
+
+\item 
+\hypertarget{classlsd__slam_1_1_frame_adac400f4b48f3d5ea20ee4ac8ea5ad8e}{const float $\ast$ {\bfseries idepth\-\_\-re\-Act} ()}\label{classlsd__slam_1_1_frame_adac400f4b48f3d5ea20ee4ac8ea5ad8e}
+
+\item 
+\hypertarget{classlsd__slam_1_1_frame_a8e128c8fdc004bd808c365c1ea38c9bd}{const float $\ast$ {\bfseries idepth\-Var\-\_\-re\-Act} ()}\label{classlsd__slam_1_1_frame_a8e128c8fdc004bd808c365c1ea38c9bd}
+
+\item 
+\hypertarget{classlsd__slam_1_1_frame_a8c3122c4784b9a8ae66210205bf531d1}{bool $\ast$ {\bfseries ref\-Pixel\-Was\-Good} ()}\label{classlsd__slam_1_1_frame_a8c3122c4784b9a8ae66210205bf531d1}
+
+\item 
+\hypertarget{classlsd__slam_1_1_frame_adb19bd5898e7d6e8ceb9a826096d166e}{bool $\ast$ {\bfseries ref\-Pixel\-Was\-Good\-No\-Create} ()}\label{classlsd__slam_1_1_frame_adb19bd5898e7d6e8ceb9a826096d166e}
+
+\item 
+\hypertarget{classlsd__slam_1_1_frame_a89c328ba630444fa4324c2c33b3141f3}{void {\bfseries clear\-\_\-ref\-Pixel\-Was\-Good} ()}\label{classlsd__slam_1_1_frame_a89c328ba630444fa4324c2c33b3141f3}
+
+\item 
+\hypertarget{classlsd__slam_1_1_frame_a3e56b78f4f1989fa15fa3da5dfb97c81}{void {\bfseries set\-Perma\-Ref} (\hyperlink{classlsd__slam_1_1_tracking_reference}{Tracking\-Reference} $\ast$reference)}\label{classlsd__slam_1_1_frame_a3e56b78f4f1989fa15fa3da5dfb97c81}
+
+\item 
+\hypertarget{classlsd__slam_1_1_frame_aab79f2a5a9f59c2cf2b9714ad48c53ae}{void {\bfseries take\-Re\-Activation\-Data} (\hyperlink{classlsd__slam_1_1_depth_map_pixel_hypothesis}{Depth\-Map\-Pixel\-Hypothesis} $\ast$depth\-Map)}\label{classlsd__slam_1_1_frame_aab79f2a5a9f59c2cf2b9714ad48c53ae}
+
+\item 
+\hypertarget{classlsd__slam_1_1_frame_af73ccb75e1e449d9a8f2044246ee3530}{boost\-::shared\-\_\-lock\\*
+$<$ boost\-::shared\-\_\-mutex $>$ {\bfseries get\-Active\-Lock} ()}\label{classlsd__slam_1_1_frame_af73ccb75e1e449d9a8f2044246ee3530}
+
+\item 
+\hypertarget{classlsd__slam_1_1_frame_a0f4a92d51569c280e4b37acbf562ea47}{Sim3 {\bfseries get\-Scaled\-Cam\-To\-World} (int num=0)}\label{classlsd__slam_1_1_frame_a0f4a92d51569c280e4b37acbf562ea47}
+
+\item 
+\hypertarget{classlsd__slam_1_1_frame_a013921be6869702deac98090a8c9033c}{bool {\bfseries has\-Tracking\-Parent} ()}\label{classlsd__slam_1_1_frame_a013921be6869702deac98090a8c9033c}
+
+\item 
+\hypertarget{classlsd__slam_1_1_frame_ae337afb7e308ff6d9be3ffa354fc66d6}{\hyperlink{classlsd__slam_1_1_frame}{Frame} $\ast$ {\bfseries get\-Tracking\-Parent} ()}\label{classlsd__slam_1_1_frame_ae337afb7e308ff6d9be3ffa354fc66d6}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classlsd__slam_1_1_frame_a9e446e7abf6fc1e988594935dad9072b}{\hyperlink{classlsd__slam_1_1_frame_pose_struct}{Frame\-Pose\-Struct} $\ast$ {\bfseries pose}}\label{classlsd__slam_1_1_frame_a9e446e7abf6fc1e988594935dad9072b}
+
+\item 
+\hypertarget{classlsd__slam_1_1_frame_a013a9e6ef9bd7d72f46df32dbd261861}{Sim3 {\bfseries last\-Constraint\-Tracked\-Cam\-To\-World}}\label{classlsd__slam_1_1_frame_a013a9e6ef9bd7d72f46df32dbd261861}
+
+\item 
+std\-::unordered\-\_\-set$<$ \hyperlink{classlsd__slam_1_1_frame}{Frame} \\*
+$\ast$, std\-::hash$<$ \hyperlink{classlsd__slam_1_1_frame}{Frame} $\ast$ $>$\\*
+, std\-::equal\-\_\-to$<$ \hyperlink{classlsd__slam_1_1_frame}{Frame} $\ast$ $>$\\*
+, Eigen\-::aligned\-\_\-allocator\\*
+$<$ \hyperlink{classlsd__slam_1_1_frame}{Frame} $\ast$ $>$ $>$ \hyperlink{classlsd__slam_1_1_frame_ac0beb1665cd6caecfef8f6103203c147}{neighbors}
+\item 
+std\-::unordered\-\_\-multimap$<$ \hyperlink{classlsd__slam_1_1_frame}{Frame} \\*
+$\ast$, Sim3, std\-::hash$<$ \hyperlink{classlsd__slam_1_1_frame}{Frame} $\ast$ $>$\\*
+, std\-::equal\-\_\-to$<$ \hyperlink{classlsd__slam_1_1_frame}{Frame} $\ast$ $>$\\*
+, Eigen\-::aligned\-\_\-allocator\\*
+$<$ std\-::pair$<$ const \hyperlink{classlsd__slam_1_1_frame}{Frame} \\*
+$\ast$, Sim3 $>$ $>$ $>$ \hyperlink{classlsd__slam_1_1_frame_a71811be54c6d349c9f13e50361b14718}{tracking\-Failed}
+\item 
+\hypertarget{classlsd__slam_1_1_frame_a2447e3447316b2803b20542e70e10785}{bool {\bfseries depth\-Has\-Been\-Updated\-Flag}}\label{classlsd__slam_1_1_frame_a2447e3447316b2803b20542e70e10785}
+
+\item 
+\hypertarget{classlsd__slam_1_1_frame_af05033d502e07e33f61908c7b0f6ea17}{boost\-::mutex {\bfseries perma\-Ref\-\_\-mutex}}\label{classlsd__slam_1_1_frame_af05033d502e07e33f61908c7b0f6ea17}
+
+\item 
+\hypertarget{classlsd__slam_1_1_frame_a18011d25126f677273f88ba227e32278}{Eigen\-::\-Vector3f $\ast$ {\bfseries perma\-Ref\-\_\-pos\-Data}}\label{classlsd__slam_1_1_frame_a18011d25126f677273f88ba227e32278}
+
+\item 
+\hypertarget{classlsd__slam_1_1_frame_ab604a46aff3018462fe4171fc9cbde69}{Eigen\-::\-Vector2f $\ast$ {\bfseries perma\-Ref\-\_\-color\-And\-Var\-Data}}\label{classlsd__slam_1_1_frame_ab604a46aff3018462fe4171fc9cbde69}
+
+\item 
+\hypertarget{classlsd__slam_1_1_frame_ae2968ee29976f194c3c8c552f7ebf3b7}{int {\bfseries perma\-Ref\-Num\-Pts}}\label{classlsd__slam_1_1_frame_ae2968ee29976f194c3c8c552f7ebf3b7}
+
+\item 
+\hypertarget{classlsd__slam_1_1_frame_a45c1d420e51ecd4b078bb5992ef9c72f}{int {\bfseries reference\-I\-D}}\label{classlsd__slam_1_1_frame_a45c1d420e51ecd4b078bb5992ef9c72f}
+
+\item 
+\hypertarget{classlsd__slam_1_1_frame_a98746a5422a8afa51dfc5fc21d4e4cc6}{int {\bfseries reference\-Level}}\label{classlsd__slam_1_1_frame_a98746a5422a8afa51dfc5fc21d4e4cc6}
+
+\item 
+\hypertarget{classlsd__slam_1_1_frame_a400b62f479205f178a23cd48f41186d0}{float {\bfseries dist\-Squared}}\label{classlsd__slam_1_1_frame_a400b62f479205f178a23cd48f41186d0}
+
+\item 
+\hypertarget{classlsd__slam_1_1_frame_aa5422a17806f94238eb4b0a997f84d3c}{Eigen\-::\-Matrix3f {\bfseries K\-\_\-other\-To\-This\-\_\-\-R}}\label{classlsd__slam_1_1_frame_aa5422a17806f94238eb4b0a997f84d3c}
+
+\item 
+\hypertarget{classlsd__slam_1_1_frame_a299bcddaca0539b927cc0e3a6ec5739b}{Eigen\-::\-Vector3f {\bfseries K\-\_\-other\-To\-This\-\_\-t}}\label{classlsd__slam_1_1_frame_a299bcddaca0539b927cc0e3a6ec5739b}
+
+\item 
+\hypertarget{classlsd__slam_1_1_frame_ac60ac357b2988ee6ae78cc0ea9030d77}{Eigen\-::\-Vector3f {\bfseries other\-To\-This\-\_\-t}}\label{classlsd__slam_1_1_frame_ac60ac357b2988ee6ae78cc0ea9030d77}
+
+\item 
+\hypertarget{classlsd__slam_1_1_frame_ae67bd56784580e5bba78c78c54c79513}{Eigen\-::\-Vector3f {\bfseries K\-\_\-this\-To\-Other\-\_\-t}}\label{classlsd__slam_1_1_frame_ae67bd56784580e5bba78c78c54c79513}
+
+\item 
+\hypertarget{classlsd__slam_1_1_frame_a99da615609b7b2470447dbc00d022543}{Eigen\-::\-Matrix3f {\bfseries this\-To\-Other\-\_\-\-R}}\label{classlsd__slam_1_1_frame_a99da615609b7b2470447dbc00d022543}
+
+\item 
+\hypertarget{classlsd__slam_1_1_frame_acc99c43a91d9a928885536632ed9b701}{Eigen\-::\-Vector3f {\bfseries other\-To\-This\-\_\-\-R\-\_\-row0}}\label{classlsd__slam_1_1_frame_acc99c43a91d9a928885536632ed9b701}
+
+\item 
+\hypertarget{classlsd__slam_1_1_frame_a9e73fe70e8b2b845d83663513a7cee31}{Eigen\-::\-Vector3f {\bfseries other\-To\-This\-\_\-\-R\-\_\-row1}}\label{classlsd__slam_1_1_frame_a9e73fe70e8b2b845d83663513a7cee31}
+
+\item 
+\hypertarget{classlsd__slam_1_1_frame_aa94f79b5dd632a55a7069a57f45927a1}{Eigen\-::\-Vector3f {\bfseries other\-To\-This\-\_\-\-R\-\_\-row2}}\label{classlsd__slam_1_1_frame_aa94f79b5dd632a55a7069a57f45927a1}
+
+\item 
+\hypertarget{classlsd__slam_1_1_frame_a61b36968ff859b298eda25741c4d98a2}{Eigen\-::\-Vector3f {\bfseries this\-To\-Other\-\_\-t}}\label{classlsd__slam_1_1_frame_a61b36968ff859b298eda25741c4d98a2}
+
+\item 
+\hypertarget{classlsd__slam_1_1_frame_ac58ef4a32c0d5052e3722da6ff84d07d}{float {\bfseries initial\-Tracked\-Residual}}\label{classlsd__slam_1_1_frame_ac58ef4a32c0d5052e3722da6ff84d07d}
+
+\item 
+\hypertarget{classlsd__slam_1_1_frame_a0e33cc989142a9266f582df4931fbd52}{int {\bfseries num\-Frames\-Tracked\-On\-This}}\label{classlsd__slam_1_1_frame_a0e33cc989142a9266f582df4931fbd52}
+
+\item 
+\hypertarget{classlsd__slam_1_1_frame_a722bd8b07e962b6de142519f38405628}{int {\bfseries num\-Mapped\-On\-This}}\label{classlsd__slam_1_1_frame_a722bd8b07e962b6de142519f38405628}
+
+\item 
+\hypertarget{classlsd__slam_1_1_frame_a18830417f9d1cdd547145fdd3d8de297}{int {\bfseries num\-Mapped\-On\-This\-Total}}\label{classlsd__slam_1_1_frame_a18830417f9d1cdd547145fdd3d8de297}
+
+\item 
+\hypertarget{classlsd__slam_1_1_frame_a8b1c8af671c71ea2d4dc934e5276c2b4}{float {\bfseries mean\-Idepth}}\label{classlsd__slam_1_1_frame_a8b1c8af671c71ea2d4dc934e5276c2b4}
+
+\item 
+\hypertarget{classlsd__slam_1_1_frame_a5d9849821321c33e90281e84d95abf37}{int {\bfseries num\-Points}}\label{classlsd__slam_1_1_frame_a5d9849821321c33e90281e84d95abf37}
+
+\item 
+\hypertarget{classlsd__slam_1_1_frame_afd88bf74afcd11574145358eac8da4b0}{int {\bfseries idx\-In\-Keyframes}}\label{classlsd__slam_1_1_frame_afd88bf74afcd11574145358eac8da4b0}
+
+\item 
+\hypertarget{classlsd__slam_1_1_frame_a6b06772b4f54122c098b9044ffd9876c}{float {\bfseries edge\-Error\-Sum}}\label{classlsd__slam_1_1_frame_a6b06772b4f54122c098b9044ffd9876c}
+
+\item 
+\hypertarget{classlsd__slam_1_1_frame_ac1d94c23c259fa087f37cf9607253010}{float {\bfseries edges\-Num}}\label{classlsd__slam_1_1_frame_ac1d94c23c259fa087f37cf9607253010}
+
+\item 
+\hypertarget{classlsd__slam_1_1_frame_a8f73786134dcc966d8f8f4ac8f7aa58c}{int {\bfseries num\-Mappable\-Pixels}}\label{classlsd__slam_1_1_frame_a8f73786134dcc966d8f8f4ac8f7aa58c}
+
+\item 
+\hypertarget{classlsd__slam_1_1_frame_ab54ac9e919e344553900a8f89f383226}{float {\bfseries mean\-Information}}\label{classlsd__slam_1_1_frame_ab54ac9e919e344553900a8f89f383226}
+
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classlsd__slam_1_1_frame_a301c44f1a60e7b77092f38610c22f920}{class {\bfseries Frame\-Memory}}\label{classlsd__slam_1_1_frame_a301c44f1a60e7b77092f38610c22f920}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{classlsd__slam_1_1_frame_a91c2bcdbabb5db67344b5379588e6990}{\index{lsd\-\_\-slam\-::\-Frame@{lsd\-\_\-slam\-::\-Frame}!Data\-Flags@{Data\-Flags}}
+\index{Data\-Flags@{Data\-Flags}!lsd_slam::Frame@{lsd\-\_\-slam\-::\-Frame}}
+\subsubsection[{Data\-Flags}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf lsd\-\_\-slam\-::\-Frame\-::\-Data\-Flags}}}\label{classlsd__slam_1_1_frame_a91c2bcdbabb5db67344b5379588e6990}
+Flags for use with require() and require\-Pyramid(). See the \hyperlink{classlsd__slam_1_1_frame}{Frame} class documentation for their exact meaning. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classlsd__slam_1_1_frame_a4ff87802d5bcafda551ffb2506f7192e}{\index{lsd\-\_\-slam\-::\-Frame@{lsd\-\_\-slam\-::\-Frame}!calculate\-Mean\-Information@{calculate\-Mean\-Information}}
+\index{calculate\-Mean\-Information@{calculate\-Mean\-Information}!lsd_slam::Frame@{lsd\-\_\-slam\-::\-Frame}}
+\subsubsection[{calculate\-Mean\-Information}]{\setlength{\rightskip}{0pt plus 5cm}void lsd\-\_\-slam\-::\-Frame\-::calculate\-Mean\-Information (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classlsd__slam_1_1_frame_a4ff87802d5bcafda551ffb2506f7192e}
+Calculates mean information for statistical purposes. \hypertarget{classlsd__slam_1_1_frame_a8d46588a32aa5feb71f771f267dc432d}{\index{lsd\-\_\-slam\-::\-Frame@{lsd\-\_\-slam\-::\-Frame}!cx@{cx}}
+\index{cx@{cx}!lsd_slam::Frame@{lsd\-\_\-slam\-::\-Frame}}
+\subsubsection[{cx}]{\setlength{\rightskip}{0pt plus 5cm}float lsd\-\_\-slam\-::\-Frame\-::cx (
+\begin{DoxyParamCaption}
+\item[{int}]{level = {\ttfamily 0}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classlsd__slam_1_1_frame_a8d46588a32aa5feb71f771f267dc432d}
+Returns K(0, 2). \hypertarget{classlsd__slam_1_1_frame_a4690556800b10f98c18a2fada62ae62b}{\index{lsd\-\_\-slam\-::\-Frame@{lsd\-\_\-slam\-::\-Frame}!cx\-Inv@{cx\-Inv}}
+\index{cx\-Inv@{cx\-Inv}!lsd_slam::Frame@{lsd\-\_\-slam\-::\-Frame}}
+\subsubsection[{cx\-Inv}]{\setlength{\rightskip}{0pt plus 5cm}float lsd\-\_\-slam\-::\-Frame\-::cx\-Inv (
+\begin{DoxyParamCaption}
+\item[{int}]{level = {\ttfamily 0}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classlsd__slam_1_1_frame_a4690556800b10f98c18a2fada62ae62b}
+Returns K\-Inv(0, 2). \hypertarget{classlsd__slam_1_1_frame_a2732f1bad0442085b11f3552a2fd0525}{\index{lsd\-\_\-slam\-::\-Frame@{lsd\-\_\-slam\-::\-Frame}!cy@{cy}}
+\index{cy@{cy}!lsd_slam::Frame@{lsd\-\_\-slam\-::\-Frame}}
+\subsubsection[{cy}]{\setlength{\rightskip}{0pt plus 5cm}float lsd\-\_\-slam\-::\-Frame\-::cy (
+\begin{DoxyParamCaption}
+\item[{int}]{level = {\ttfamily 0}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classlsd__slam_1_1_frame_a2732f1bad0442085b11f3552a2fd0525}
+Returns K(1, 2). \hypertarget{classlsd__slam_1_1_frame_aae9fa687e7e515ba009a5fe5a617bf75}{\index{lsd\-\_\-slam\-::\-Frame@{lsd\-\_\-slam\-::\-Frame}!cy\-Inv@{cy\-Inv}}
+\index{cy\-Inv@{cy\-Inv}!lsd_slam::Frame@{lsd\-\_\-slam\-::\-Frame}}
+\subsubsection[{cy\-Inv}]{\setlength{\rightskip}{0pt plus 5cm}float lsd\-\_\-slam\-::\-Frame\-::cy\-Inv (
+\begin{DoxyParamCaption}
+\item[{int}]{level = {\ttfamily 0}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classlsd__slam_1_1_frame_aae9fa687e7e515ba009a5fe5a617bf75}
+Returns K\-Inv(1, 2). \hypertarget{classlsd__slam_1_1_frame_aaa552f594a3e712b981762719d652359}{\index{lsd\-\_\-slam\-::\-Frame@{lsd\-\_\-slam\-::\-Frame}!fx@{fx}}
+\index{fx@{fx}!lsd_slam::Frame@{lsd\-\_\-slam\-::\-Frame}}
+\subsubsection[{fx}]{\setlength{\rightskip}{0pt plus 5cm}float lsd\-\_\-slam\-::\-Frame\-::fx (
+\begin{DoxyParamCaption}
+\item[{int}]{level = {\ttfamily 0}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classlsd__slam_1_1_frame_aaa552f594a3e712b981762719d652359}
+Returns K(0, 0). \hypertarget{classlsd__slam_1_1_frame_a9d98889a6a367e862f28b4a035604f46}{\index{lsd\-\_\-slam\-::\-Frame@{lsd\-\_\-slam\-::\-Frame}!fx\-Inv@{fx\-Inv}}
+\index{fx\-Inv@{fx\-Inv}!lsd_slam::Frame@{lsd\-\_\-slam\-::\-Frame}}
+\subsubsection[{fx\-Inv}]{\setlength{\rightskip}{0pt plus 5cm}float lsd\-\_\-slam\-::\-Frame\-::fx\-Inv (
+\begin{DoxyParamCaption}
+\item[{int}]{level = {\ttfamily 0}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classlsd__slam_1_1_frame_a9d98889a6a367e862f28b4a035604f46}
+Returns K\-Inv(0, 0). \hypertarget{classlsd__slam_1_1_frame_af8a9e82339d7f20a380a47d27cdeb01e}{\index{lsd\-\_\-slam\-::\-Frame@{lsd\-\_\-slam\-::\-Frame}!fy@{fy}}
+\index{fy@{fy}!lsd_slam::Frame@{lsd\-\_\-slam\-::\-Frame}}
+\subsubsection[{fy}]{\setlength{\rightskip}{0pt plus 5cm}float lsd\-\_\-slam\-::\-Frame\-::fy (
+\begin{DoxyParamCaption}
+\item[{int}]{level = {\ttfamily 0}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classlsd__slam_1_1_frame_af8a9e82339d7f20a380a47d27cdeb01e}
+Returns K(1, 1). \hypertarget{classlsd__slam_1_1_frame_ab5c98941622d0f0470381a8ed2f833c1}{\index{lsd\-\_\-slam\-::\-Frame@{lsd\-\_\-slam\-::\-Frame}!fy\-Inv@{fy\-Inv}}
+\index{fy\-Inv@{fy\-Inv}!lsd_slam::Frame@{lsd\-\_\-slam\-::\-Frame}}
+\subsubsection[{fy\-Inv}]{\setlength{\rightskip}{0pt plus 5cm}float lsd\-\_\-slam\-::\-Frame\-::fy\-Inv (
+\begin{DoxyParamCaption}
+\item[{int}]{level = {\ttfamily 0}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classlsd__slam_1_1_frame_ab5c98941622d0f0470381a8ed2f833c1}
+Returns K\-Inv(1, 1). \hypertarget{classlsd__slam_1_1_frame_a014d19bf6ffba0f0c0b8b684f9afb0b0}{\index{lsd\-\_\-slam\-::\-Frame@{lsd\-\_\-slam\-::\-Frame}!height@{height}}
+\index{height@{height}!lsd_slam::Frame@{lsd\-\_\-slam\-::\-Frame}}
+\subsubsection[{height}]{\setlength{\rightskip}{0pt plus 5cm}int lsd\-\_\-slam\-::\-Frame\-::height (
+\begin{DoxyParamCaption}
+\item[{int}]{level = {\ttfamily 0}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classlsd__slam_1_1_frame_a014d19bf6ffba0f0c0b8b684f9afb0b0}
+Returns the frame's image height. \hypertarget{classlsd__slam_1_1_frame_a6d38d40cd9a68d253bcb3cab2ddfa068}{\index{lsd\-\_\-slam\-::\-Frame@{lsd\-\_\-slam\-::\-Frame}!id@{id}}
+\index{id@{id}!lsd_slam::Frame@{lsd\-\_\-slam\-::\-Frame}}
+\subsubsection[{id}]{\setlength{\rightskip}{0pt plus 5cm}int lsd\-\_\-slam\-::\-Frame\-::id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classlsd__slam_1_1_frame_a6d38d40cd9a68d253bcb3cab2ddfa068}
+Returns the unique frame id. \hypertarget{classlsd__slam_1_1_frame_adeb235dc3e4a4d8fcf622b5771299c31}{\index{lsd\-\_\-slam\-::\-Frame@{lsd\-\_\-slam\-::\-Frame}!K@{K}}
+\index{K@{K}!lsd_slam::Frame@{lsd\-\_\-slam\-::\-Frame}}
+\subsubsection[{K}]{\setlength{\rightskip}{0pt plus 5cm}const Eigen\-::\-Matrix3f \& lsd\-\_\-slam\-::\-Frame\-::\-K (
+\begin{DoxyParamCaption}
+\item[{int}]{level = {\ttfamily 0}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classlsd__slam_1_1_frame_adeb235dc3e4a4d8fcf622b5771299c31}
+Returns the frame's intrinsics matrix. \hypertarget{classlsd__slam_1_1_frame_af32c050a1ada7d6c22aa8df04fd94085}{\index{lsd\-\_\-slam\-::\-Frame@{lsd\-\_\-slam\-::\-Frame}!K\-Inv@{K\-Inv}}
+\index{K\-Inv@{K\-Inv}!lsd_slam::Frame@{lsd\-\_\-slam\-::\-Frame}}
+\subsubsection[{K\-Inv}]{\setlength{\rightskip}{0pt plus 5cm}const Eigen\-::\-Matrix3f \& lsd\-\_\-slam\-::\-Frame\-::\-K\-Inv (
+\begin{DoxyParamCaption}
+\item[{int}]{level = {\ttfamily 0}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classlsd__slam_1_1_frame_af32c050a1ada7d6c22aa8df04fd94085}
+Returns the frame's inverse intrinsics matrix. \hypertarget{classlsd__slam_1_1_frame_a377c85038536721d99473f810cb45241}{\index{lsd\-\_\-slam\-::\-Frame@{lsd\-\_\-slam\-::\-Frame}!prepare\-For\-Stereo\-With@{prepare\-For\-Stereo\-With}}
+\index{prepare\-For\-Stereo\-With@{prepare\-For\-Stereo\-With}!lsd_slam::Frame@{lsd\-\_\-slam\-::\-Frame}}
+\subsubsection[{prepare\-For\-Stereo\-With}]{\setlength{\rightskip}{0pt plus 5cm}void lsd\-\_\-slam\-::\-Frame\-::prepare\-For\-Stereo\-With (
+\begin{DoxyParamCaption}
+\item[{{\bf Frame} $\ast$}]{other, }
+\item[{Sim3}]{this\-To\-Other, }
+\item[{const Eigen\-::\-Matrix3f \&}]{K, }
+\item[{const int}]{level}
+\end{DoxyParamCaption}
+)}}\label{classlsd__slam_1_1_frame_a377c85038536721d99473f810cb45241}
+Prepares this frame for stereo comparisons with the other frame (computes some intermediate values that will be needed) \hypertarget{classlsd__slam_1_1_frame_aa869fc645781090678dc61399ef26f73}{\index{lsd\-\_\-slam\-::\-Frame@{lsd\-\_\-slam\-::\-Frame}!set\-Depth@{set\-Depth}}
+\index{set\-Depth@{set\-Depth}!lsd_slam::Frame@{lsd\-\_\-slam\-::\-Frame}}
+\subsubsection[{set\-Depth}]{\setlength{\rightskip}{0pt plus 5cm}void lsd\-\_\-slam\-::\-Frame\-::set\-Depth (
+\begin{DoxyParamCaption}
+\item[{const {\bf Depth\-Map\-Pixel\-Hypothesis} $\ast$}]{new\-Depth}
+\end{DoxyParamCaption}
+)}}\label{classlsd__slam_1_1_frame_aa869fc645781090678dc61399ef26f73}
+Sets or updates idepth and idepth\-Var on level zero. Invalidates higher levels. \hypertarget{classlsd__slam_1_1_frame_a7e563deb5eadcaddc85d7618bb021b1b}{\index{lsd\-\_\-slam\-::\-Frame@{lsd\-\_\-slam\-::\-Frame}!set\-Depth\-From\-Ground\-Truth@{set\-Depth\-From\-Ground\-Truth}}
+\index{set\-Depth\-From\-Ground\-Truth@{set\-Depth\-From\-Ground\-Truth}!lsd_slam::Frame@{lsd\-\_\-slam\-::\-Frame}}
+\subsubsection[{set\-Depth\-From\-Ground\-Truth}]{\setlength{\rightskip}{0pt plus 5cm}void lsd\-\_\-slam\-::\-Frame\-::set\-Depth\-From\-Ground\-Truth (
+\begin{DoxyParamCaption}
+\item[{const float $\ast$}]{depth, }
+\item[{float}]{cov\-\_\-scale = {\ttfamily 1.0f}}
+\end{DoxyParamCaption}
+)}}\label{classlsd__slam_1_1_frame_a7e563deb5eadcaddc85d7618bb021b1b}
+Sets ground truth depth (real, not inverse!) from a float array on level zero. Invalidates higher levels. \hypertarget{classlsd__slam_1_1_frame_a7124f3e1da6e9db387a3f89706225b47}{\index{lsd\-\_\-slam\-::\-Frame@{lsd\-\_\-slam\-::\-Frame}!timestamp@{timestamp}}
+\index{timestamp@{timestamp}!lsd_slam::Frame@{lsd\-\_\-slam\-::\-Frame}}
+\subsubsection[{timestamp}]{\setlength{\rightskip}{0pt plus 5cm}double lsd\-\_\-slam\-::\-Frame\-::timestamp (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classlsd__slam_1_1_frame_a7124f3e1da6e9db387a3f89706225b47}
+Returns the frame's recording timestamp. \hypertarget{classlsd__slam_1_1_frame_a3f14a1c43b6cb21d31274f880b0bf36b}{\index{lsd\-\_\-slam\-::\-Frame@{lsd\-\_\-slam\-::\-Frame}!width@{width}}
+\index{width@{width}!lsd_slam::Frame@{lsd\-\_\-slam\-::\-Frame}}
+\subsubsection[{width}]{\setlength{\rightskip}{0pt plus 5cm}int lsd\-\_\-slam\-::\-Frame\-::width (
+\begin{DoxyParamCaption}
+\item[{int}]{level = {\ttfamily 0}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classlsd__slam_1_1_frame_a3f14a1c43b6cb21d31274f880b0bf36b}
+Returns the frame's image width. 
+
+\subsection{Member Data Documentation}
+\hypertarget{classlsd__slam_1_1_frame_ac0beb1665cd6caecfef8f6103203c147}{\index{lsd\-\_\-slam\-::\-Frame@{lsd\-\_\-slam\-::\-Frame}!neighbors@{neighbors}}
+\index{neighbors@{neighbors}!lsd_slam::Frame@{lsd\-\_\-slam\-::\-Frame}}
+\subsubsection[{neighbors}]{\setlength{\rightskip}{0pt plus 5cm}std\-::unordered\-\_\-set$<$ {\bf Frame}$\ast$, std\-::hash$<${\bf Frame}$\ast$$>$, std\-::equal\-\_\-to$<${\bf Frame}$\ast$$>$, Eigen\-::aligned\-\_\-allocator$<$ {\bf Frame}$\ast$ $>$ $>$ lsd\-\_\-slam\-::\-Frame\-::neighbors}}\label{classlsd__slam_1_1_frame_ac0beb1665cd6caecfef8f6103203c147}
+Pointers to all adjacent Frames in graph. empty for non-\/keyframes. \hypertarget{classlsd__slam_1_1_frame_a71811be54c6d349c9f13e50361b14718}{\index{lsd\-\_\-slam\-::\-Frame@{lsd\-\_\-slam\-::\-Frame}!tracking\-Failed@{tracking\-Failed}}
+\index{tracking\-Failed@{tracking\-Failed}!lsd_slam::Frame@{lsd\-\_\-slam\-::\-Frame}}
+\subsubsection[{tracking\-Failed}]{\setlength{\rightskip}{0pt plus 5cm}std\-::unordered\-\_\-multimap$<$ {\bf Frame}$\ast$, Sim3, std\-::hash$<${\bf Frame}$\ast$$>$, std\-::equal\-\_\-to$<${\bf Frame}$\ast$$>$, Eigen\-::aligned\-\_\-allocator$<$ std\-::pair$<$const {\bf Frame}$\ast$,Sim3$>$ $>$ $>$ lsd\-\_\-slam\-::\-Frame\-::tracking\-Failed}}\label{classlsd__slam_1_1_frame_a71811be54c6d349c9f13e50361b14718}
+Multi-\/\-Map indicating for which other keyframes with which initialization tracking failed. 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/home/king/rgbd-\/slam-\/lets-\/do-\/it/9-\/doxygen/lsd\-\_\-slam/lsd\-\_\-slam\-\_\-core/src/\-Data\-Structures/Frame.\-h\item 
+/home/king/rgbd-\/slam-\/lets-\/do-\/it/9-\/doxygen/lsd\-\_\-slam/lsd\-\_\-slam\-\_\-core/src/\-Data\-Structures/Frame.\-cpp\end{DoxyCompactItemize}

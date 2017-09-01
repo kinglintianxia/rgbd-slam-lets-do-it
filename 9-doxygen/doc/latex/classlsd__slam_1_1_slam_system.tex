@@ -1,0 +1,149 @@
+\hypertarget{classlsd__slam_1_1_slam_system}{\section{lsd\-\_\-slam\-:\-:Slam\-System Class Reference}
+\label{classlsd__slam_1_1_slam_system}\index{lsd\-\_\-slam\-::\-Slam\-System@{lsd\-\_\-slam\-::\-Slam\-System}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classlsd__slam_1_1_slam_system_a35a27a8430a71a0852f1cce9a80ba48e}{{\bfseries Slam\-System} (int w, int h, Eigen\-::\-Matrix3f K, bool enable\-S\-L\-A\-M=true)}\label{classlsd__slam_1_1_slam_system_a35a27a8430a71a0852f1cce9a80ba48e}
+
+\item 
+\hypertarget{classlsd__slam_1_1_slam_system_a52c04711d79a56fb7fed67857bd8645a}{{\bfseries Slam\-System} (const \hyperlink{classlsd__slam_1_1_slam_system}{Slam\-System} \&)=delete}\label{classlsd__slam_1_1_slam_system_a52c04711d79a56fb7fed67857bd8645a}
+
+\item 
+\hypertarget{classlsd__slam_1_1_slam_system_ab33477ee62c1ec8ea70f431f01a04333}{\hyperlink{classlsd__slam_1_1_slam_system}{Slam\-System} \& {\bfseries operator=} (const \hyperlink{classlsd__slam_1_1_slam_system}{Slam\-System} \&)=delete}\label{classlsd__slam_1_1_slam_system_ab33477ee62c1ec8ea70f431f01a04333}
+
+\item 
+\hypertarget{classlsd__slam_1_1_slam_system_a04efedcb7753da51a13c5362b2f47f27}{void {\bfseries random\-Init} (uchar $\ast$image, double time\-Stamp, int id)}\label{classlsd__slam_1_1_slam_system_a04efedcb7753da51a13c5362b2f47f27}
+
+\item 
+\hypertarget{classlsd__slam_1_1_slam_system_ae02d68a3e3a62b6000aa6e30fbc68cdc}{void {\bfseries gt\-Depth\-Init} (uchar $\ast$image, float $\ast$depth, double time\-Stamp, int id)}\label{classlsd__slam_1_1_slam_system_ae02d68a3e3a62b6000aa6e30fbc68cdc}
+
+\item 
+\hypertarget{classlsd__slam_1_1_slam_system_a5cf500a63c1b36530e03af22494393ad}{void {\bfseries track\-Frame} (uchar $\ast$image, unsigned int frame\-I\-D, bool block\-Until\-Mapped, double timestamp)}\label{classlsd__slam_1_1_slam_system_a5cf500a63c1b36530e03af22494393ad}
+
+\item 
+\hypertarget{classlsd__slam_1_1_slam_system_a7514826f9920f14509ab402a5514e806}{void {\bfseries finalize} ()}\label{classlsd__slam_1_1_slam_system_a7514826f9920f14509ab402a5514e806}
+
+\item 
+void \hyperlink{classlsd__slam_1_1_slam_system_afaba440ddcefadb3f2f63f49f9f35ce5}{optimize\-Graph} ()
+\item 
+\hypertarget{classlsd__slam_1_1_slam_system_aa7b982c6fedebeffb6e1f29710dad901}{\hyperlink{classlsd__slam_1_1_frame}{Frame} $\ast$ {\bfseries get\-Current\-Keyframe} ()}\label{classlsd__slam_1_1_slam_system_aa7b982c6fedebeffb6e1f29710dad901}
+
+\item 
+S\-E3 \hyperlink{classlsd__slam_1_1_slam_system_aacbca2b7e2a9abb363ff31ab65cb1be9}{get\-Current\-Pose\-Estimate} ()
+\item 
+void \hyperlink{classlsd__slam_1_1_slam_system_a3e42198c83b0bc44bef086dd77647535}{set\-Visualization} (\hyperlink{classlsd__slam_1_1_output3_d_wrapper}{Output3\-D\-Wrapper} $\ast$output\-Wrapper)
+\item 
+\hypertarget{classlsd__slam_1_1_slam_system_a7544b1a81677f688a8513701927a3b9f}{void {\bfseries request\-Depth\-Map\-Screenshot} (const std\-::string \&filename)}\label{classlsd__slam_1_1_slam_system_a7544b1a81677f688a8513701927a3b9f}
+
+\item 
+\hypertarget{classlsd__slam_1_1_slam_system_a47e5085f186de2ad8b7f16544cf47345}{bool {\bfseries do\-Mapping\-Iteration} ()}\label{classlsd__slam_1_1_slam_system_a47e5085f186de2ad8b7f16544cf47345}
+
+\item 
+\hypertarget{classlsd__slam_1_1_slam_system_a8febc788522b3335f7188166d68a31fc}{int {\bfseries find\-Constraints\-For\-New\-Key\-Frames} (\hyperlink{classlsd__slam_1_1_frame}{Frame} $\ast$new\-Key\-Frame, bool force\-Parent=true, bool use\-F\-A\-B\-M\-A\-P=true, float close\-Candidates\-T\-H=1.\-0)}\label{classlsd__slam_1_1_slam_system_a8febc788522b3335f7188166d68a31fc}
+
+\item 
+\hypertarget{classlsd__slam_1_1_slam_system_a5451ba373870cc1a77365032550561af}{bool {\bfseries optimization\-Iteration} (int its\-Per\-Try, float min\-Change)}\label{classlsd__slam_1_1_slam_system_a5451ba373870cc1a77365032550561af}
+
+\item 
+\hypertarget{classlsd__slam_1_1_slam_system_aa993d7baa046789a59619d1363947dd7}{void {\bfseries publish\-Keyframe\-Graph} ()}\label{classlsd__slam_1_1_slam_system_aa993d7baa046789a59619d1363947dd7}
+
+\item 
+\hypertarget{classlsd__slam_1_1_slam_system_addea24a2ab2476d64f2a53df0edf8ccc}{std\-::vector$<$ \hyperlink{classlsd__slam_1_1_frame_pose_struct}{Frame\-Pose\-Struct} \\*
+$\ast$, Eigen\-::aligned\-\_\-allocator\\*
+$<$ \hyperlink{classlsd__slam_1_1_frame_pose_struct}{lsd\-\_\-slam\-::\-Frame\-Pose\-Struct} $\ast$ $>$ $>$ {\bfseries get\-All\-Poses} ()}\label{classlsd__slam_1_1_slam_system_addea24a2ab2476d64f2a53df0edf8ccc}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classlsd__slam_1_1_slam_system_abf37dab386985c2b8f4be082054aaca9}{E\-I\-G\-E\-N\-\_\-\-M\-A\-K\-E\-\_\-\-A\-L\-I\-G\-N\-E\-D\-\_\-\-O\-P\-E\-R\-A\-T\-O\-R\-\_\-\-N\-E\-W int {\bfseries width}}\label{classlsd__slam_1_1_slam_system_abf37dab386985c2b8f4be082054aaca9}
+
+\item 
+\hypertarget{classlsd__slam_1_1_slam_system_a46b251157291420a574325bb0afd111d}{int {\bfseries height}}\label{classlsd__slam_1_1_slam_system_a46b251157291420a574325bb0afd111d}
+
+\item 
+\hypertarget{classlsd__slam_1_1_slam_system_aa6da73a383a85f86d5627557bacb9030}{Eigen\-::\-Matrix3f {\bfseries K}}\label{classlsd__slam_1_1_slam_system_aa6da73a383a85f86d5627557bacb9030}
+
+\item 
+\hypertarget{classlsd__slam_1_1_slam_system_a46273479640afc3fe654df6134f1b46b}{const bool {\bfseries S\-L\-A\-M\-Enabled}}\label{classlsd__slam_1_1_slam_system_a46273479640afc3fe654df6134f1b46b}
+
+\item 
+\hypertarget{classlsd__slam_1_1_slam_system_ac1d4bb2fde9636ff0fdd77f26aec1adf}{bool {\bfseries tracking\-Is\-Good}}\label{classlsd__slam_1_1_slam_system_ac1d4bb2fde9636ff0fdd77f26aec1adf}
+
+\item 
+\hypertarget{classlsd__slam_1_1_slam_system_ad9c806b5759673d349285a1932371468}{float {\bfseries ms\-Track\-Frame}}\label{classlsd__slam_1_1_slam_system_ad9c806b5759673d349285a1932371468}
+
+\item 
+\hypertarget{classlsd__slam_1_1_slam_system_a4dc99f4b1bfe8d3b29449c5dbfa0aef5}{float {\bfseries ms\-Optimization\-Iteration}}\label{classlsd__slam_1_1_slam_system_a4dc99f4b1bfe8d3b29449c5dbfa0aef5}
+
+\item 
+\hypertarget{classlsd__slam_1_1_slam_system_aebf7defd84aa254143b9d3fd367bbd44}{float {\bfseries ms\-Find\-Constraints\-Itaration}}\label{classlsd__slam_1_1_slam_system_aebf7defd84aa254143b9d3fd367bbd44}
+
+\item 
+\hypertarget{classlsd__slam_1_1_slam_system_acd24b17d98067e9cf68463b0b981e2ec}{float {\bfseries ms\-Find\-References}}\label{classlsd__slam_1_1_slam_system_acd24b17d98067e9cf68463b0b981e2ec}
+
+\item 
+\hypertarget{classlsd__slam_1_1_slam_system_a96afb44f40e9a886a1587914a9c7eb45}{int {\bfseries n\-Track\-Frame}}\label{classlsd__slam_1_1_slam_system_a96afb44f40e9a886a1587914a9c7eb45}
+
+\item 
+\hypertarget{classlsd__slam_1_1_slam_system_a56efe273c2c693d3a8881efc0069f0ce}{int {\bfseries n\-Optimization\-Iteration}}\label{classlsd__slam_1_1_slam_system_a56efe273c2c693d3a8881efc0069f0ce}
+
+\item 
+\hypertarget{classlsd__slam_1_1_slam_system_a98cad3489a4366df32fe2374dbcbb98b}{int {\bfseries n\-Find\-Constraints\-Itaration}}\label{classlsd__slam_1_1_slam_system_a98cad3489a4366df32fe2374dbcbb98b}
+
+\item 
+\hypertarget{classlsd__slam_1_1_slam_system_a842883a5e0db6974767d736413bdfa16}{int {\bfseries n\-Find\-References}}\label{classlsd__slam_1_1_slam_system_a842883a5e0db6974767d736413bdfa16}
+
+\item 
+\hypertarget{classlsd__slam_1_1_slam_system_afa16e5438ecf3ce6bcbe8d2c9957a0d6}{float {\bfseries n\-Avg\-Track\-Frame}}\label{classlsd__slam_1_1_slam_system_afa16e5438ecf3ce6bcbe8d2c9957a0d6}
+
+\item 
+\hypertarget{classlsd__slam_1_1_slam_system_a33aba0ab793606ab5cd02dbf84e7e600}{float {\bfseries n\-Avg\-Optimization\-Iteration}}\label{classlsd__slam_1_1_slam_system_a33aba0ab793606ab5cd02dbf84e7e600}
+
+\item 
+\hypertarget{classlsd__slam_1_1_slam_system_afcee25cc2351732c26f0958b9bc886c8}{float {\bfseries n\-Avg\-Find\-Constraints\-Itaration}}\label{classlsd__slam_1_1_slam_system_afcee25cc2351732c26f0958b9bc886c8}
+
+\item 
+\hypertarget{classlsd__slam_1_1_slam_system_a537abdf20f10fb0382699361b351ecfc}{float {\bfseries n\-Avg\-Find\-References}}\label{classlsd__slam_1_1_slam_system_a537abdf20f10fb0382699361b351ecfc}
+
+\item 
+\hypertarget{classlsd__slam_1_1_slam_system_abfcf298f9f1a95a58da250de4ad41c29}{struct timeval {\bfseries last\-Hz\-Update}}\label{classlsd__slam_1_1_slam_system_abfcf298f9f1a95a58da250de4ad41c29}
+
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classlsd__slam_1_1_slam_system_a58b23779ede944b1716e0ffd20b379ae}{class {\bfseries Integration\-Test}}\label{classlsd__slam_1_1_slam_system_a58b23779ede944b1716e0ffd20b379ae}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classlsd__slam_1_1_slam_system_aacbca2b7e2a9abb363ff31ab65cb1be9}{\index{lsd\-\_\-slam\-::\-Slam\-System@{lsd\-\_\-slam\-::\-Slam\-System}!get\-Current\-Pose\-Estimate@{get\-Current\-Pose\-Estimate}}
+\index{get\-Current\-Pose\-Estimate@{get\-Current\-Pose\-Estimate}!lsd_slam::SlamSystem@{lsd\-\_\-slam\-::\-Slam\-System}}
+\subsubsection[{get\-Current\-Pose\-Estimate}]{\setlength{\rightskip}{0pt plus 5cm}S\-E3 Slam\-System\-::get\-Current\-Pose\-Estimate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classlsd__slam_1_1_slam_system_aacbca2b7e2a9abb363ff31ab65cb1be9}
+Returns the current pose estimate. \hypertarget{classlsd__slam_1_1_slam_system_afaba440ddcefadb3f2f63f49f9f35ce5}{\index{lsd\-\_\-slam\-::\-Slam\-System@{lsd\-\_\-slam\-::\-Slam\-System}!optimize\-Graph@{optimize\-Graph}}
+\index{optimize\-Graph@{optimize\-Graph}!lsd_slam::SlamSystem@{lsd\-\_\-slam\-::\-Slam\-System}}
+\subsubsection[{optimize\-Graph}]{\setlength{\rightskip}{0pt plus 5cm}void Slam\-System\-::optimize\-Graph (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classlsd__slam_1_1_slam_system_afaba440ddcefadb3f2f63f49f9f35ce5}
+Does an offline optimization step. \hypertarget{classlsd__slam_1_1_slam_system_a3e42198c83b0bc44bef086dd77647535}{\index{lsd\-\_\-slam\-::\-Slam\-System@{lsd\-\_\-slam\-::\-Slam\-System}!set\-Visualization@{set\-Visualization}}
+\index{set\-Visualization@{set\-Visualization}!lsd_slam::SlamSystem@{lsd\-\_\-slam\-::\-Slam\-System}}
+\subsubsection[{set\-Visualization}]{\setlength{\rightskip}{0pt plus 5cm}void Slam\-System\-::set\-Visualization (
+\begin{DoxyParamCaption}
+\item[{{\bf Output3\-D\-Wrapper} $\ast$}]{output\-Wrapper}
+\end{DoxyParamCaption}
+)}}\label{classlsd__slam_1_1_slam_system_a3e42198c83b0bc44bef086dd77647535}
+Sets the visualization where point clouds and camera poses will be sent to. 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/home/king/rgbd-\/slam-\/lets-\/do-\/it/9-\/doxygen/lsd\-\_\-slam/lsd\-\_\-slam\-\_\-core/src/Slam\-System.\-h\item 
+/home/king/rgbd-\/slam-\/lets-\/do-\/it/9-\/doxygen/lsd\-\_\-slam/lsd\-\_\-slam\-\_\-core/src/Slam\-System.\-cpp\end{DoxyCompactItemize}

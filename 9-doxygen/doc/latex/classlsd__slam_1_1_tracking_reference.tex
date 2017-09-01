@@ -1,0 +1,77 @@
+\hypertarget{classlsd__slam_1_1_tracking_reference}{\section{lsd\-\_\-slam\-:\-:Tracking\-Reference Class Reference}
+\label{classlsd__slam_1_1_tracking_reference}\index{lsd\-\_\-slam\-::\-Tracking\-Reference@{lsd\-\_\-slam\-::\-Tracking\-Reference}}
+}
+
+
+{\ttfamily \#include $<$Tracking\-Reference.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+E\-I\-G\-E\-N\-\_\-\-M\-A\-K\-E\-\_\-\-A\-L\-I\-G\-N\-E\-D\-\_\-\-O\-P\-E\-R\-A\-T\-O\-R\-\_\-\-N\-E\-W \hyperlink{classlsd__slam_1_1_tracking_reference_a9b7ff59d246af0340beaad4f1d0aa480}{Tracking\-Reference} ()
+\item 
+\hypertarget{classlsd__slam_1_1_tracking_reference_a73119563af9f3bde976a5a9e4e988b2b}{void {\bfseries import\-Frame} (\hyperlink{classlsd__slam_1_1_frame}{Frame} $\ast$source)}\label{classlsd__slam_1_1_tracking_reference_a73119563af9f3bde976a5a9e4e988b2b}
+
+\item 
+\hypertarget{classlsd__slam_1_1_tracking_reference_a213f14e896c734faf7e2676282a7c54f}{void {\bfseries make\-Point\-Cloud} (int level)}\label{classlsd__slam_1_1_tracking_reference_a213f14e896c734faf7e2676282a7c54f}
+
+\item 
+\hypertarget{classlsd__slam_1_1_tracking_reference_a60a7eea36764253fe87d0b451c07dbb9}{void {\bfseries clear\-All} ()}\label{classlsd__slam_1_1_tracking_reference_a60a7eea36764253fe87d0b451c07dbb9}
+
+\item 
+\hypertarget{classlsd__slam_1_1_tracking_reference_a6e68faee69299c4bd7bc820a71db3719}{void {\bfseries invalidate} ()}\label{classlsd__slam_1_1_tracking_reference_a6e68faee69299c4bd7bc820a71db3719}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classlsd__slam_1_1_tracking_reference_a94f35da0e05ae9aca45340873aaedd2a}{\hyperlink{classlsd__slam_1_1_frame}{Frame} $\ast$ {\bfseries keyframe}}\label{classlsd__slam_1_1_tracking_reference_a94f35da0e05ae9aca45340873aaedd2a}
+
+\item 
+\hypertarget{classlsd__slam_1_1_tracking_reference_a2b6b9c6a539fa3a97104682842d09dd2}{boost\-::shared\-\_\-lock\\*
+$<$ boost\-::shared\-\_\-mutex $>$ {\bfseries keyframe\-Lock}}\label{classlsd__slam_1_1_tracking_reference_a2b6b9c6a539fa3a97104682842d09dd2}
+
+\item 
+\hypertarget{classlsd__slam_1_1_tracking_reference_afc8f3d86399f94d2fa0ca3bcf07141fe}{int {\bfseries frame\-I\-D}}\label{classlsd__slam_1_1_tracking_reference_afc8f3d86399f94d2fa0ca3bcf07141fe}
+
+\item 
+\hypertarget{classlsd__slam_1_1_tracking_reference_ad3dc954bcb22fbe6bae2d4da09e02c70}{Eigen\-::\-Vector3f $\ast$ {\bfseries pos\-Data} \mbox{[}P\-Y\-R\-A\-M\-I\-D\-\_\-\-L\-E\-V\-E\-L\-S\mbox{]}}\label{classlsd__slam_1_1_tracking_reference_ad3dc954bcb22fbe6bae2d4da09e02c70}
+
+\item 
+\hypertarget{classlsd__slam_1_1_tracking_reference_ade7fa937bd39eabf18b5f864bccfaa53}{Eigen\-::\-Vector2f $\ast$ {\bfseries grad\-Data} \mbox{[}P\-Y\-R\-A\-M\-I\-D\-\_\-\-L\-E\-V\-E\-L\-S\mbox{]}}\label{classlsd__slam_1_1_tracking_reference_ade7fa937bd39eabf18b5f864bccfaa53}
+
+\item 
+\hypertarget{classlsd__slam_1_1_tracking_reference_a2bd89fcf42df9a019cbf0ca212cf2616}{Eigen\-::\-Vector2f $\ast$ {\bfseries color\-And\-Var\-Data} \mbox{[}P\-Y\-R\-A\-M\-I\-D\-\_\-\-L\-E\-V\-E\-L\-S\mbox{]}}\label{classlsd__slam_1_1_tracking_reference_a2bd89fcf42df9a019cbf0ca212cf2616}
+
+\item 
+\hypertarget{classlsd__slam_1_1_tracking_reference_a3873d2347cc25e6c9408f8696f04bd30}{int $\ast$ {\bfseries point\-Pos\-In\-X\-Y\-Grid} \mbox{[}P\-Y\-R\-A\-M\-I\-D\-\_\-\-L\-E\-V\-E\-L\-S\mbox{]}}\label{classlsd__slam_1_1_tracking_reference_a3873d2347cc25e6c9408f8696f04bd30}
+
+\item 
+\hypertarget{classlsd__slam_1_1_tracking_reference_a6d26c5de029ea949d13d7dc15f737b21}{int {\bfseries num\-Data} \mbox{[}P\-Y\-R\-A\-M\-I\-D\-\_\-\-L\-E\-V\-E\-L\-S\mbox{]}}\label{classlsd__slam_1_1_tracking_reference_a6d26c5de029ea949d13d7dc15f737b21}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Point cloud used to track frame poses.
+
+Basically this stores a point cloud generated from known frames. It is used to track a new frame by finding a projection of the point cloud which makes it look as much like the new frame as possible.
+
+It is intended to use more than one old frame as source for the point cloud. Also other data like Kinect depth data could be imported.
+
+A\-T\-T\-E\-N\-T\-I\-O\-N\-: as the level zero point cloud is not used for tracking, it is not fully calculated. Only the weights are valid on this level! 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classlsd__slam_1_1_tracking_reference_a9b7ff59d246af0340beaad4f1d0aa480}{\index{lsd\-\_\-slam\-::\-Tracking\-Reference@{lsd\-\_\-slam\-::\-Tracking\-Reference}!Tracking\-Reference@{Tracking\-Reference}}
+\index{Tracking\-Reference@{Tracking\-Reference}!lsd_slam::TrackingReference@{lsd\-\_\-slam\-::\-Tracking\-Reference}}
+\subsubsection[{Tracking\-Reference}]{\setlength{\rightskip}{0pt plus 5cm}lsd\-\_\-slam\-::\-Tracking\-Reference\-::\-Tracking\-Reference (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classlsd__slam_1_1_tracking_reference_a9b7ff59d246af0340beaad4f1d0aa480}
+Creates an empty \hyperlink{classlsd__slam_1_1_tracking_reference}{Tracking\-Reference} with optional preallocation per level. 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/home/king/rgbd-\/slam-\/lets-\/do-\/it/9-\/doxygen/lsd\-\_\-slam/lsd\-\_\-slam\-\_\-core/src/\-Tracking/Tracking\-Reference.\-h\item 
+/home/king/rgbd-\/slam-\/lets-\/do-\/it/9-\/doxygen/lsd\-\_\-slam/lsd\-\_\-slam\-\_\-core/src/\-Tracking/Tracking\-Reference.\-cpp\end{DoxyCompactItemize}
