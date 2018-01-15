@@ -41,3 +41,7 @@
 # build file
 build
 build-*
+bin
+
+# g2o file
+*.pcd
