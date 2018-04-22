@@ -16,6 +16,7 @@ include_directories(${OCTOMAP_INCLUDE_DIRS})
 find_package(PCL 1.7 REQUIRED)
 include_directories(${PCL_INCLUDE_DIRS})
 # OpenCV
+set(OpenCV_DIR "/home/king/Documents/opencv-3.4.0/build")
 find_package(OpenCV REQUIRED)
 include_directories(${OpenCV_INLCUDE_DIRS})
 # Eigen
@@ -40,6 +41,13 @@ target_link_libraries(color_octomap
 add_executable(joint_octomap src/joint_octomap.cpp)
 target_link_libraries(joint_octomap
     ${OCTOMAP_LIBRARIES}
+    ${PCL_LIBRARIES}
+    ${OpenCV_LIBS}
+    )
+
+# joint pcl from kf poses
+add_executable(pcl_pose_cloud src/pcl_from_pose.cpp)
+target_link_libraries(pcl_pose_cloud
     ${PCL_LIBRARIES}
     ${OpenCV_LIBS}
     )
