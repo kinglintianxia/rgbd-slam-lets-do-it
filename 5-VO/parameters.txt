@@ -21,9 +21,9 @@ camera.scale=1000.0;
 start_index=1
 end_index=100
 # 数据所在目录
-rgb_dir=/media/king/Lenovo/image/data/rgb_png/
+rgb_dir=/home/king/Documents/image/data/rgb_png/
 rgb_extension=.png
-depth_dir=/media/king/Lenovo/image/data/depth_png/
+depth_dir=/home/king/Documents/image/data/depth_png/
 depth_extension=.png
 # 点云分辨率
 voxel_grid=0.01

@@ -28,7 +28,12 @@ void read_frame(ParameterReader read, int cnt, Frame& frame)
     ss << read.get_data("depth_dir") + std::to_string(cnt) + read.get_data("depth_extension");
     // !!!!!!!!!!!!!!!  -1 is neccesary!!!
     frame.depth = cv::imread(ss.str(), -1);
-//    std::cout << "Read current frame: " << ss.str() << std::endl;
+    std::cout << "Read current frame: " << ss.str() << std::endl;
+    if (frame.color.empty() || frame.depth.empty())
+    {
+        std::cout << "Read frame error, please check out!" << std::endl;
+        exit(1);
+    }
 }
 
 double norm_of_transform(Result_of_pnp result)
@@ -41,7 +46,7 @@ double norm_of_transform(Result_of_pnp result)
 int main(int argc, char** argv)
 {
     // Get parameter
-    ParameterReader para_read("../parameters.txt");
+    ParameterReader para_read("/home/king/Documents/king/rgbd-slam-lets-do-it/5-VO/parameters.txt");
     // Camera
     CAMERA_INTRINSIC_PARAMETERS camera;
     get_cam_param(para_read, camera);
@@ -72,7 +77,7 @@ int main(int argc, char** argv)
 */
 
 
-    for(int i = start_index+1; i < end_index; ++i)
+    for(int i = start_index; i < end_index; ++i)
     {
 //        viewer->removeAllPointClouds();
         Frame current_frame;

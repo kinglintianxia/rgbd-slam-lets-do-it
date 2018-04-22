@@ -53,13 +53,16 @@ cv::Point3f point2d_to_3d(cv::Point3f point, CAMERA_INTRINSIC_PARAMETERS camera)
 void compute_keypoints_descriptors(Frame& frame, std::string det, std::string des)
 {
     // OpenCV2
-    cv::Ptr<cv::FeatureDetector> detector = cv::FeatureDetector::create(det);
-    cv::Ptr<cv::DescriptorExtractor> descriptor = cv::DescriptorExtractor::create(des);
-    if (!detector || !descriptor)
-    {
-        std::cerr<<"Unknown detector or discriptor type !"<<detector<<","<<descriptor<<std::endl;
-        return;
-    }
+//    cv::Ptr<cv::FeatureDetector> detector = cv::FeatureDetector::create(det);
+//    cv::Ptr<cv::DescriptorExtractor> descriptor = cv::DescriptorExtractor::create(des);
+    // OpenCV3
+    cv::Ptr<cv::FeatureDetector> detector = cv::ORB::create();
+    cv::Ptr<cv::DescriptorExtractor> descriptor = cv::ORB::create();
+//    if (!detector || !descriptor)
+//    {
+//        std::cerr<<"Unknown detector or discriptor type !"<<detector<<","<<descriptor<<std::endl;
+//        return;
+//    }
     // keypoints
     detector->detect(frame.color, frame.kp);
     // descriptors
@@ -115,7 +118,7 @@ Result_of_pnp estimate_motion(Frame frame1, Frame frame2, CAMERA_INTRINSIC_PARAM
         // 将(u,v,d)转成(x,y,z)
         cv::Point3f pt ( p.x, p.y, d );
         cv::Point3f pd = point2d_to_3d(pt, camera);
-        pt3.push_back( pd );
+        pt3.push_back(pd);
         // Image2 pt2
         pt2.push_back( cv::Point2f( frame2.kp[good_matches[i].trainIdx].pt ) );
 

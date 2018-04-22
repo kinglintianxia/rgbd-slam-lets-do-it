@@ -39,9 +39,16 @@
 *~
 
 # build file
-build
+build/
 build-*
-bin
+*/bin/
+2-generate_pointcloud/bin
+3-Feature_extraction_and_registration/bin
+4-transform_pointcloud/bin
+5-VO/bin
+6-g2o/bin
+7-loop_closing/bin
+8-octomap/bin
 
 # g2o file
 *.pcd
