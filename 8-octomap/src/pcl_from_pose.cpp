@@ -113,7 +113,7 @@ int main(int argc, char** argv)
     for(int i = 0; i < img_name_pairs.size(); i++)
     {
         pcl::PointCloud<pcl::PointXYZRGB>::Ptr cloud(new pcl::PointCloud<pcl::PointXYZRGB>());
-        boost::format fmt("/home/king/Documents/image/rgbd_dataset_freiburg3_long_office_household/rgb/%s.png");
+        boost::format fmt("/home/king/Documents/image/tum3_seg/rgb/%s.png");
         cv::Mat rgb = cv::imread((fmt % keyframes[i]).str().c_str());
 
         fmt = boost::format("/home/king/Documents/image/rgbd_dataset_freiburg3_long_office_household/depth/%s.png");
@@ -122,7 +122,8 @@ int main(int argc, char** argv)
         if (rgb.empty() | depth.empty())
         {
             std::cout << "---Empty image!---" << std::endl;
-            exit(1);
+            continue;
+//            exit(1);
         }
         for(int v = 0; v < depth.rows; v++)
         {

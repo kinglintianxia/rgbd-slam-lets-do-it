@@ -49,6 +49,11 @@ build-*
 6-g2o/bin
 7-loop_closing/bin
 8-octomap/bin
+# lib
+1-hello_slam/lib
 
 # g2o file
 *.pcd
+*.ot
+
+
